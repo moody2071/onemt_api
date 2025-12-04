@@ -1,0 +1,23 @@
+
+material glow_02
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend add
+			depth_write off
+
+			texture_unit P_light_034.png
+			{
+				texture_alias P_light_034.png
+				texture P_light_034.png
+				max_anisotropy 16
+				filtering anisotropic anisotropic linear
+			}
+		}
+
+	}
+
+}

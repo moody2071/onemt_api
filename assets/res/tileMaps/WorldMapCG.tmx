@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.0.2" orientation="isometric" renderorder="right-down" width="33" height="33" tilewidth="256" tileheight="128" infinite="0" nextobjectid="1">
+ <tileset firstgid="0" name="test" tilewidth="256" tileheight="140" spacing="6" margin="4" tilecount="98" columns="7">
+  <image source="World_png/World_1.png" width="2048" height="2048"/>
+ </tileset>
+ <tileset firstgid="98" name="test 2" tilewidth="256" tileheight="140" spacing="6" margin="4" tilecount="98" columns="7">
+  <image source="World_png/World_4.png" width="2048" height="2048"/>
+ </tileset>
+ <layer name="tile" width="33" height="33" tileset="test">
+  <data encoding="base64" compression="zlib">
+   eJxtVO2O2kAMjD9IqIgCBBq4qirSSUR3QuqJ/qiO9kV2/Wv3/V+i4yVQtccKRUs8Ho/HVkRUPm+uZwgSPk33vn25XMbxeKD5brW+vVy1dANvuv0ZgOene/oEWd+vLRCX489/AfezXGw6fRuff511tngE6NfLmk7nV90LPUZshu8H/v1+0F07X3+MLrfb+vREp2/HHyB7kN4pEQnJ2/j+IBklOxKH0NdxfJA82za1EisLv4yXj/pbRIRBkIn3X87/8TdNUzMpE0eNSUlOxZMpukDvJBZUNJBxCCaqi79tDLOaRCjGSswE4SBQcrdpua2TZZGqihUUaJQIAjQzzWJZZ7bEDqgqgoZsCVJUeQIMpkhFyOMQZxqSQNF9W/qWY0ZQkMweYc3G/mfWbIuMftfmKz07Avo54cIw7CZ0YKtC5cQMcSKSDQ/IEJ4Vkr6llK1CNhOpk0CzgsXFlkL9atdaRU5LbjdxmRgrRANaCg1irhBv5fqDI4C6Y1QWB834QQkXWx6uFBie+u1SCslnrWgDXL4XWrqWay8dm5pTog4XkS7DZ0QyaxZXO7JZ9ETfCp88+X6wN1za7SSYqZZBKQV/qAtlJ/U6fZuQ6/W9ieA9qJYVdtE+3AEOqGTwBOVYbPBKsCxHVQf4uorFYpfbXsaHOOc0362xGeKTIAtABfJsdwptoD3/OnTQBA+wkiwhhj9pF0y2
+  </data>
+ </layer>
+ <layer name="ground" width="33" height="33" tileset="test 2">
+  <data encoding="base64" compression="zlib">
+   eJylVMFOwzAM9TYOG5P4BOi2G0fEJa4dn5GgaZGQxv//CHbSpmmnwIFIS9I9+/n5uZsgQV7sYbEu8N81/IX3ukkd7z97aIF8PUKX+wXurEhXxwlerEw9gEEq+pxtjcqrdskMTxomfAs9x313dFAJAMDNAe/uGfW2OzIwrXDm7R7Z3HMaB+iXNqhtgAgYH8QrDy0oJlM4j5nbAvYhDAHe0kPQD6lIJzBTdCHEV+TdoqevHa5Unk8jXwboWvQIH3Ceys/6v+YIl44h67VhXVWGK4qQzqELWapRenbi23F0OkKXMqGPPJfGigtsDkUZs5rhseBtZbtPs2rgoVBjya+WAZDbYrApzfh0L3TqNAvNfm3VnBWnyuoqSTKWmVM0i56EHlNnqKLjzcnIFwl8aiYx+okTs8Ek+dB84tNKxvf4m4yvPpFRnW/+DMSrLPwB5Sc3OA==
+  </data>
+ </layer>
+</map>

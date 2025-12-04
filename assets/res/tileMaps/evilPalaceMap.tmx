@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.0.2" orientation="isometric" renderorder="right-down" width="10" height="10" tilewidth="256" tileheight="128" infinite="0" nextobjectid="1">
+ <tileset firstgid="0" name="cyzc_1" tilewidth="256" tileheight="140" spacing="6" margin="4" tilecount="98" columns="7">
+  <image source="World_png/cyzc_1.png" width="2048" height="2048"/>
+ </tileset>
+ <layer name="tile" width="10" height="10" tileset="cyzc_1">
+  <data encoding="base64" compression="zlib">
+   eJwLDuZjYGCXFhcMtjOVZJDWMg62D5LTYWAQDQoKDDbV1mRg0FbXVdcFiqABYSMGIzAjRMXOSBPMAuoJUo0FsWSCgoKDfYCMOBm74GAAbg8Mjg==
+  </data>
+ </layer>
+ <layer name="ground" width="10" height="10" tileset="cyzc_1">
+  <data encoding="base64" compression="zlib">
+   eJxjEOZg4BTmtWWAACYwKQxEwgw8QJIXzOcVZufwA7PYmKEKGRISoYzY+KQETgaQaiCIB+pjYOAEaQPLC7MBCQDQMwTY
+  </data>
+ </layer>
+</map>

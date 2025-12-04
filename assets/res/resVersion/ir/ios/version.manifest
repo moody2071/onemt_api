@@ -1,0 +1,8 @@
+{
+	"packageUrl" : "https://rosiranupdate.menaapp.net/hd_res/ios_release_001/",
+	"remoteManifestUrl" : "https://rosiranupdate.menaapp.net/hd_res/ios_release_001/project.manifest",
+	"remoteVersionUrl" : "https://rosiranupdate.menaapp.net/hd_res/ios_release_001/version.manifest",
+	"version" : "1.1.001",
+	"engineVersion" : "3.0",
+	"isHDRes" : true
+}

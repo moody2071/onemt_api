@@ -1,0 +1,21 @@
+
+material ying_01_smoke_02
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend add
+			depth_write off
+
+			texture_unit ying_01_smoke_02.png
+			{
+				texture_alias ying_01_smoke_02.png
+				texture ying_01_smoke_02.png
+			}
+		}
+
+	}
+
+}

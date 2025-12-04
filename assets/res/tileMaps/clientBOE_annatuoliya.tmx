@@ -1,0 +1,442 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<map height="110" infinite="0" nextlayerid="17" nextobjectid="1" orientation="isometric" renderorder="right-down" tiledversion="1.7.2" tileheight="128" tilewidth="256" version="1.5" width="110">
+ <tileset columns="7" firstgid="0" margin="4" name="test" spacing="6" tilecount="98" tileheight="140" tilewidth="256">
+  <image height="2048" source="World_png/World_1.png" width="2048" />
+  <wangsets>
+   <wangset name="地形" tile="-1" type="corner">
+    <wangcolor color="#ff0000" name="1" probability="1" tile="-1">
+     <properties>
+      <property name="name" value="108617" />
+      <property name="type" value="space" />
+     </properties>
+    </wangcolor>
+    <wangcolor color="#00ff00" name="2" probability="1" tile="-1">
+     <properties>
+      <property name="name" value="108619" />
+      <property name="type" value="stop" />
+     </properties>
+    </wangcolor>
+    <wangcolor color="#0000ff" name="3" probability="1" tile="-1">
+     <properties>
+      <property name="name" value="108617" />
+      <property name="type" value="space" />
+     </properties>
+    </wangcolor>
+    <wangcolor color="#ff7700" name="han-caopi" probability="1" tile="-1" />
+    <wangcolor color="#00e9ff" name="han-bianhua" probability="1" tile="-1" />
+    <wangcolor color="#ff00d8" name="cao-aiqiu" probability="1" tile="-1" />
+    <wangcolor color="#ffff00" name="cao-zaoze" probability="1" tile="-1" />
+    <wangcolor color="#a000ff" name="han-aiqiu" probability="1" tile="-1" />
+    <wangcolor color="#00ffa1" name="lu" probability="1" tile="-1" />
+    <wangtile tileid="0" wangid="0,1,0,1,0,1,0,1" />
+    <wangtile tileid="1" wangid="0,1,0,1,0,1,0,1" />
+    <wangtile tileid="2" wangid="0,1,0,1,0,1,0,1" />
+    <wangtile tileid="3" wangid="0,1,0,1,0,1,0,1" />
+    <wangtile tileid="4" wangid="0,2,0,1,0,1,0,1" />
+    <wangtile tileid="5" wangid="0,1,0,1,0,1,0,2" />
+    <wangtile tileid="6" wangid="0,2,0,1,0,1,0,2" />
+    <wangtile tileid="7" wangid="0,1,0,2,0,1,0,1" />
+    <wangtile tileid="8" wangid="0,2,0,2,0,1,0,1" />
+    <wangtile tileid="9" wangid="0,1,0,2,0,1,0,2" />
+    <wangtile tileid="10" wangid="0,2,0,2,0,1,0,2" />
+    <wangtile tileid="11" wangid="0,1,0,1,0,2,0,1" />
+    <wangtile tileid="12" wangid="0,2,0,1,0,2,0,1" />
+    <wangtile tileid="13" wangid="0,1,0,1,0,2,0,2" />
+    <wangtile tileid="14" wangid="0,2,0,1,0,2,0,2" />
+    <wangtile tileid="15" wangid="0,1,0,2,0,2,0,1" />
+    <wangtile tileid="16" wangid="0,2,0,2,0,2,0,1" />
+    <wangtile tileid="17" wangid="0,1,0,2,0,2,0,2" />
+    <wangtile tileid="18" wangid="0,2,0,2,0,2,0,2" />
+    <wangtile tileid="19" wangid="0,2,0,1,0,1,0,2" />
+    <wangtile tileid="20" wangid="0,2,0,2,0,1,0,1" />
+    <wangtile tileid="21" wangid="0,1,0,1,0,2,0,2" />
+    <wangtile tileid="22" wangid="0,1,0,2,0,2,0,1" />
+    <wangtile tileid="23" wangid="0,3,0,1,0,1,0,1" />
+    <wangtile tileid="24" wangid="0,1,0,1,0,1,0,3" />
+    <wangtile tileid="25" wangid="0,3,0,1,0,1,0,3" />
+    <wangtile tileid="26" wangid="0,1,0,3,0,1,0,1" />
+    <wangtile tileid="27" wangid="0,3,0,3,0,1,0,1" />
+    <wangtile tileid="28" wangid="0,1,0,3,0,1,0,3" />
+    <wangtile tileid="29" wangid="0,3,0,3,0,1,0,3" />
+    <wangtile tileid="30" wangid="0,1,0,1,0,3,0,1" />
+    <wangtile tileid="31" wangid="0,3,0,1,0,3,0,1" />
+    <wangtile tileid="32" wangid="0,1,0,1,0,3,0,3" />
+    <wangtile tileid="33" wangid="0,3,0,1,0,3,0,3" />
+    <wangtile tileid="34" wangid="0,1,0,3,0,3,0,1" />
+    <wangtile tileid="35" wangid="0,3,0,3,0,3,0,1" />
+    <wangtile tileid="36" wangid="0,1,0,3,0,3,0,3" />
+    <wangtile tileid="37" wangid="0,3,0,3,0,3,0,3" />
+    <wangtile tileid="38" wangid="0,3,0,1,0,1,0,3" />
+    <wangtile tileid="39" wangid="0,3,0,3,0,1,0,1" />
+    <wangtile tileid="40" wangid="0,1,0,1,0,3,0,3" />
+    <wangtile tileid="41" wangid="0,1,0,3,0,3,0,1" />
+    <wangtile tileid="42" wangid="0,3,0,1,0,1,0,1" />
+    <wangtile tileid="43" wangid="0,1,0,1,0,1,0,3" />
+    <wangtile tileid="44" wangid="0,3,0,1,0,1,0,3" />
+    <wangtile tileid="45" wangid="0,1,0,3,0,1,0,1" />
+    <wangtile tileid="46" wangid="0,3,0,3,0,1,0,1" />
+    <wangtile tileid="47" wangid="0,1,0,3,0,1,0,3" />
+    <wangtile tileid="48" wangid="0,3,0,3,0,1,0,3" />
+    <wangtile tileid="49" wangid="0,1,0,1,0,3,0,1" />
+    <wangtile tileid="50" wangid="0,3,0,1,0,3,0,1" />
+    <wangtile tileid="51" wangid="0,1,0,1,0,3,0,3" />
+    <wangtile tileid="52" wangid="0,3,0,1,0,3,0,3" />
+    <wangtile tileid="53" wangid="0,1,0,3,0,3,0,1" />
+    <wangtile tileid="54" wangid="0,3,0,3,0,3,0,1" />
+    <wangtile tileid="55" wangid="0,1,0,3,0,3,0,3" />
+    <wangtile tileid="56" wangid="0,3,0,3,0,3,0,3" />
+    <wangtile tileid="57" wangid="0,3,0,1,0,1,0,3" />
+    <wangtile tileid="58" wangid="0,3,0,3,0,1,0,1" />
+    <wangtile tileid="59" wangid="0,1,0,1,0,3,0,3" />
+    <wangtile tileid="60" wangid="0,1,0,3,0,3,0,1" />
+    <wangtile tileid="61" wangid="0,8,0,8,0,8,0,8" />
+    <wangtile tileid="62" wangid="0,8,0,8,0,8,0,8" />
+    <wangtile tileid="69" wangid="0,8,0,8,0,8,0,8" />
+    <wangtile tileid="76" wangid="0,8,0,8,0,8,0,8" />
+    <wangtile tileid="77" wangid="0,4,0,4,0,4,0,4" />
+    <wangtile tileid="78" wangid="0,4,0,4,0,4,0,4" />
+    <wangtile tileid="79" wangid="0,4,0,4,0,4,0,4" />
+    <wangtile tileid="80" wangid="0,4,0,4,0,4,0,4" />
+    <wangtile tileid="81" wangid="0,4,0,4,0,4,0,4" />
+    <wangtile tileid="82" wangid="0,9,0,9,0,9,0,9" />
+    <wangtile tileid="83" wangid="0,9,0,9,0,9,0,9" />
+    <wangtile tileid="84" wangid="0,5,0,5,0,5,0,5" />
+    <wangtile tileid="85" wangid="0,5,0,5,0,5,0,5" />
+    <wangtile tileid="86" wangid="0,5,0,5,0,5,0,5" />
+    <wangtile tileid="87" wangid="0,6,0,6,0,6,0,6" />
+    <wangtile tileid="88" wangid="0,6,0,6,0,6,0,6" />
+    <wangtile tileid="89" wangid="0,6,0,6,0,6,0,6" />
+    <wangtile tileid="90" wangid="0,9,0,9,0,9,0,9" />
+    <wangtile tileid="91" wangid="0,7,0,7,0,7,0,7" />
+    <wangtile tileid="92" wangid="0,7,0,7,0,7,0,7" />
+    <wangtile tileid="93" wangid="0,7,0,7,0,7,0,7" />
+    <wangtile tileid="94" wangid="0,7,0,7,0,7,0,7" />
+    <wangtile tileid="95" wangid="0,6,0,6,0,6,0,6" />
+    <wangtile tileid="96" wangid="0,6,0,6,0,6,0,6" />
+   </wangset>
+  </wangsets>
+ </tileset>
+ <tileset columns="7" firstgid="98" margin="4" name="test 2" spacing="6" tilecount="98" tileheight="140" tilewidth="256">
+  <image height="2048" source="World_png/World_4.png" width="2048" />
+  <wangsets>
+   <wangset name="地形" tile="-1" type="corner">
+    <wangcolor color="#ff0000" name="cao-shu" probability="1" tile="-1" />
+    <wangcolor color="#00ff00" name="cao-xiaoshan" probability="1" tile="-1" />
+    <wangcolor color="#0000ff" name="cao-guanmu" probability="1" tile="-1" />
+    <wangcolor color="#ff7700" name="cao-hua" probability="1" tile="-1" />
+    <wangcolor color="#00e9ff" name="wujian" probability="1" tile="-1" />
+    <wangcolor color="#ff00d8" name="yiji" probability="1" tile="-1" />
+    <wangcolor color="#ffff00" name="kushu" probability="1" tile="-1" />
+    <wangcolor color="#a000ff" name="cao-bianhua" probability="1" tile="-1" />
+    <wangcolor color="#00ffa1" name="chuan" probability="1" tile="-1" />
+    <wangcolor color="#ffa8a8" name="suishi" probability="1" tile="-1" />
+    <wangcolor color="#b4a8ff" name="han-shu" probability="1" tile="-1" />
+    <wangcolor color="#96ffa7" name="jinji" probability="1" tile="-1" />
+    <wangcolor color="#8e7848" name="xiaoshanshi" probability="1" tile="-1" />
+    <wangcolor color="#5a5a5a" name="han-xiaoshan" probability="1" tile="-1" />
+    <wangcolor color="#0e7a46" name="han-bianhua" probability="1" tile="-1" />
+    <wangcolor color="#00000000" name="cao-shu2" probability="1" tile="-1" />
+    <wangcolor color="#034655" name="han-guanmu" probability="1" tile="-1" />
+    <wangcolor color="#4251d0" name="han-dashitou" probability="1" tile="-1" />
+    <wangtile tileid="6" wangid="0,2,0,2,0,2,0,2" />
+    <wangtile tileid="13" wangid="0,2,0,2,0,2,0,2" />
+    <wangtile tileid="20" wangid="0,14,0,14,0,14,0,14" />
+    <wangtile tileid="27" wangid="0,14,0,14,0,14,0,14" />
+    <wangtile tileid="28" wangid="0,5,0,5,0,5,0,5" />
+    <wangtile tileid="29" wangid="0,5,0,5,0,5,0,5" />
+    <wangtile tileid="30" wangid="0,5,0,5,0,5,0,5" />
+    <wangtile tileid="31" wangid="0,10,0,10,0,10,0,10" />
+    <wangtile tileid="32" wangid="0,10,0,10,0,10,0,10" />
+    <wangtile tileid="33" wangid="0,10,0,10,0,10,0,10" />
+    <wangtile tileid="34" wangid="0,10,0,10,0,10,0,10" />
+    <wangtile tileid="35" wangid="0,5,0,5,0,5,0,5" />
+    <wangtile tileid="36" wangid="0,5,0,5,0,5,0,5" />
+    <wangtile tileid="37" wangid="0,5,0,5,0,5,0,5" />
+    <wangtile tileid="38" wangid="0,5,0,5,0,5,0,5" />
+    <wangtile tileid="39" wangid="0,5,0,5,0,5,0,5" />
+    <wangtile tileid="40" wangid="0,5,0,5,0,5,0,5" />
+    <wangtile tileid="41" wangid="0,9,0,9,0,9,0,9" />
+    <wangtile tileid="42" wangid="0,17,0,17,0,17,0,17" />
+    <wangtile tileid="43" wangid="0,17,0,17,0,17,0,17" />
+    <wangtile tileid="44" wangid="0,17,0,17,0,17,0,17" />
+    <wangtile tileid="45" wangid="0,17,0,17,0,17,0,17" />
+    <wangtile tileid="46" wangid="0,17,0,17,0,17,0,17" />
+    <wangtile tileid="47" wangid="0,17,0,17,0,17,0,17" />
+    <wangtile tileid="48" wangid="0,17,0,17,0,17,0,17" />
+    <wangtile tileid="49" wangid="0,11,0,11,0,11,0,11" />
+    <wangtile tileid="50" wangid="0,11,0,11,0,11,0,11" />
+    <wangtile tileid="51" wangid="0,11,0,11,0,11,0,11" />
+    <wangtile tileid="52" wangid="0,17,0,17,0,17,0,17" />
+    <wangtile tileid="53" wangid="0,11,0,11,0,11,0,11" />
+    <wangtile tileid="54" wangid="0,11,0,11,0,11,0,11" />
+    <wangtile tileid="55" wangid="0,17,0,17,0,17,0,17" />
+    <wangtile tileid="56" wangid="0,1,0,1,0,1,0,1" />
+    <wangtile tileid="57" wangid="0,1,0,1,0,1,0,1" />
+    <wangtile tileid="59" wangid="0,3,0,3,0,3,0,3" />
+    <wangtile tileid="60" wangid="0,1,0,1,0,1,0,1" />
+    <wangtile tileid="61" wangid="0,3,0,3,0,3,0,3" />
+    <wangtile tileid="62" wangid="0,1,0,1,0,1,0,1" />
+    <wangtile tileid="66" wangid="0,4,0,4,0,4,0,4" />
+    <wangtile tileid="67" wangid="0,4,0,4,0,4,0,4" />
+    <wangtile tileid="68" wangid="0,4,0,4,0,4,0,4" />
+    <wangtile tileid="69" wangid="0,4,0,4,0,4,0,4" />
+    <wangtile tileid="70" wangid="0,3,0,3,0,3,0,3" />
+    <wangtile tileid="71" wangid="0,3,0,3,0,3,0,3" />
+    <wangtile tileid="72" wangid="0,3,0,3,0,3,0,3" />
+    <wangtile tileid="73" wangid="0,3,0,3,0,3,0,3" />
+    <wangtile tileid="74" wangid="0,3,0,3,0,3,0,3" />
+    <wangtile tileid="75" wangid="0,3,0,3,0,3,0,3" />
+    <wangtile tileid="76" wangid="0,3,0,3,0,3,0,3" />
+    <wangtile tileid="77" wangid="0,15,0,15,0,15,0,15" />
+    <wangtile tileid="78" wangid="0,15,0,15,0,15,0,15" />
+    <wangtile tileid="79" wangid="0,15,0,15,0,15,0,15" />
+    <wangtile tileid="80" wangid="0,15,0,15,0,15,0,15" />
+    <wangtile tileid="81" wangid="0,15,0,15,0,15,0,15" />
+    <wangtile tileid="82" wangid="0,5,0,5,0,5,0,5" />
+    <wangtile tileid="83" wangid="0,5,0,5,0,5,0,5" />
+    <wangtile tileid="84" wangid="0,7,0,7,0,7,0,7" />
+    <wangtile tileid="85" wangid="0,7,0,7,0,7,0,7" />
+    <wangtile tileid="86" wangid="0,7,0,7,0,7,0,7" />
+    <wangtile tileid="88" wangid="0,7,0,7,0,7,0,7" />
+    <wangtile tileid="89" wangid="0,18,0,18,0,18,0,18" />
+    <wangtile tileid="91" wangid="0,12,0,12,0,12,0,12" />
+    <wangtile tileid="92" wangid="0,12,0,12,0,12,0,12" />
+    <wangtile tileid="93" wangid="0,12,0,12,0,12,0,12" />
+    <wangtile tileid="94" wangid="0,12,0,12,0,12,0,12" />
+    <wangtile tileid="95" wangid="0,12,0,12,0,12,0,12" />
+    <wangtile tileid="96" wangid="0,18,0,18,0,18,0,18" />
+    <wangtile tileid="97" wangid="0,18,0,18,0,18,0,18" />
+   </wangset>
+  </wangsets>
+ </tileset>
+ <tileset columns="7" firstgid="196" margin="4" name="World_5" spacing="6" tilecount="98" tileheight="140" tilewidth="256">
+  <image height="2048" source="World_png/World_5.png" width="2048" />
+ </tileset>
+ <tileset columns="7" firstgid="294" margin="6" name="World_0" spacing="6" tilecount="98" tileheight="140" tilewidth="256">
+  <image height="2048" source="World_png/World_0.png" width="2048" />
+ </tileset>
+ <layer height="110" id="12" locked="1" name="Tile Layer 5" tileset="test 2" visible="0" width="110">
+  <data compression="zlib" encoding="base64">eJztwYEAAAAAwyDV+VMc5FUBAAAAAAAAAAAAAMCHAXwxuoA=
+</data>
+ </layer>
+ <layer height="110" id="5" locked="1" name="tile" tileset="test" width="110">
+  <data compression="zlib" encoding="base64">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
+</data>
+ </layer>
+ <layer height="110" id="9" locked="1" name="tile-dizhuang" tileset="World_5" width="110">
+  <data compression="zlib" encoding="base64">eJzt2LEJACAMRUHdf2lBECxsLAxR7xZ4aX9K4X11UFNTy1aLO0zt3hoAAECXet++W6szNbUztS1q
+an/XAAAAWIidZGqpa7EbXU1NzU/scg1SdAHP
+</data>
+ </layer>
+ <layer height="110" id="4" locked="1" name="dizuo" tileset="World_5" width="110">
+  <data compression="zlib" encoding="base64">eJzt2sEJgDAMQNEuoifdf0UvCsWeLDUl5T3IBJ+cklL4bjvb+c9+tEMP3ZK6Q8V0e0LpNlJAt8py
+3aoNCFBtgG4AAAAAAAAAjDbnFj3t9L4MPwQ5vf6tAt6uqnYSdvPnmJNuGV3CRRSh
+</data>
+ </layer>
+ <layer height="110" id="10" locked="1" name="ground" tileset="test 2" width="110">
+  <data compression="zlib" encoding="base64">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
+</data>
+ </layer>
+ <layer height="110" id="13" locked="1" name="Tile Layer 6" opacity="0.7" tileset="test 2" visible="0" width="110">
+  <data compression="zlib" encoding="base64">eJzt2bENADAIA0GvRJv9B2MFmohEulvgaS0SGDnbB/CLmlFTU1NTU1NTU1NTU1NTU1NbrAEA7/KU
+AgAA4C7LE0gaf7Yj3w==
+</data>
+ </layer>
+ <layer height="110" id="14" locked="1" name="弩塔/加农炮可迁城区域" tileset="test 2" visible="0" width="110">
+  <data compression="zlib" encoding="base64">eJzt17kNACAMADG2yf4bUqKUCPHbC1x9pbBBNGpqamqX1AAAAMhefsCDa5GpqalNpKb2dw0AAADG
+rf1YNTU1NXpUXqRZlQ==
+</data>
+ </layer>
+ <layer height="110" id="16" locked="1" name="野怪生成位置" tileset="test 2" visible="0" width="110">
+  <data compression="zlib" encoding="base64">eJzt2rENwCAMAEGvQ0ed/QejoYWQKALFuh/AB7UdIS11nX5ApupKNBqNRqPRaDTaz7Uyjkaj0RJp
+76PRaDQajUZLqU2G3dZHPFhKfaDt/RuNRqPRaDQajbZJkzTNOaSkiAblW5Ok
+</data>
+ </layer>
+ <layer height="110" id="15" locked="1" name="营地" tileset="test 2" visible="0" width="110">
+  <data compression="zlib" encoding="base64">eJzt18EJACAMBMHUY/8FClYgYiAJMw3s7+AiAPKsQ02tTg3INHk91HrWAOqYvLZqPWsAAACQ5fbh
+/nnCamoAAPBmA+hMHYk=
+</data>
+ </layer>
+</map>

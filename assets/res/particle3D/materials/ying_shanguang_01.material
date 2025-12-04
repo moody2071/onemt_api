@@ -1,0 +1,21 @@
+
+material ying_shanguang_01
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend add
+			depth_write off
+
+			texture_unit ying_shanguang_01.png
+			{
+				texture_alias ying_shanguang_01.png
+				texture ying_shanguang_01.png
+			}
+		}
+
+	}
+
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.0.2" orientation="isometric" renderorder="right-down" width="10" height="10" tilewidth="256" tileheight="128" infinite="0" nextobjectid="1">
+ <tileset firstgid="0" name="World_1" tilewidth="256" tileheight="140" spacing="6" margin="4" tilecount="98" columns="7">
+  <image source="World_png/World_1.png" width="2048" height="2048"/>
+ </tileset>
+ <tileset firstgid="98" name="world_4" tilewidth="256" tileheight="140" spacing="6" margin="4" tilecount="98" columns="7">
+  <image source="World_png/World_4.png" width="2048" height="2048"/>
+ </tileset>
+ <layer name="tile" width="10" height="10" tileset="World_1">
+  <data encoding="base64" compression="zlib">
+   eJyTcQszZQADbXU5xcgEECshUsOEIUHazIhBT1lFVdnM3FSWQdtK3TAwSEkHKB0RGSFnKglUGRkfFaFhwxAVycAQFxOpr8kA0p0YkWitKg8yJoqBQSNQE8gAACPjEBA=
+  </data>
+ </layer>
+ <layer name="ground" width="10" height="10" tileset="world_4">
+  <data encoding="base64" compression="zlib">
+   eJwdjDsKgEAUA8cP+AMvYWNlJYIL+167Wlqo6P3vYXAgRQITYIZtzxp2oPeQ1/h4LdEsrloYbiYctwfO1/g5SGy4LOEBZAmLikNIRadXtVSV7QczYAqY
+  </data>
+ </layer>
+</map>

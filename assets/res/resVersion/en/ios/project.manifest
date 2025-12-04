@@ -1,0 +1,32 @@
+{
+	"packageUrl" : "https://rosenupdate.menaapp.net/hd_res/ios_release_002/",
+	"remoteManifestUrl" : "https://rosenupdate.menaapp.net/hd_res/ios_release_002/project.manifest",
+	"remoteVersionUrl" : "https://rosenupdate.menaapp.net/hd_res/ios_release_002/version.manifest",
+	"version" : "1.2.001",
+	"engineVersion" : "3.0",
+	"isHDRes" : true,
+	"assets" : 
+	{
+		"ActivityBgCommon_1.zip" : {
+			"md5" : "b868c7abd88bf4fcbf5579c4884ab025",
+			"compressed" : false
+		},
+		"ActivityIconCommon_1.zip" : {
+			"md5" : "55b0c516b61dddfc927b1342fc71e238",
+			"compressed" : false
+		},
+		"MailInfoCommon_1.zip" : {
+			"md5" : "8ec8d73eca65b3a6a6aed3de0f6ebe0c",
+			"compressed" : false
+		},
+		"RechargePopHeadCommon_1.zip" : {
+			"md5" : "b13c5d8753691d79be904035ddfd7704",
+			"compressed" : false
+		},
+		"RechargePageCommon_1.zip" : {
+			"md5" : "fcadd58e858319d4b566325c69c01ead",
+			"compressed" : false
+		}
+	},
+    "searchPaths" : []
+}

@@ -1,0 +1,32 @@
+{
+	"packageUrl" : "http://192.168.8.20/koh/hd_res/mac/",
+	"remoteManifestUrl" : "http://192.168.8.20/koh/hd_res/mac/project.manifest",
+	"remoteVersionUrl" : "http://192.168.8.20/koh/hd_res/mac/version.manifest",
+	"version" : "1.2.001",
+	"engineVersion" : "3.0",
+	"isHDRes" : true,
+	"assets" : 
+	{
+		"ActivityBgCommon_1.zip" : {
+			"md5" : "ea1ea1e32352b61d6f20b628b9bd3693",
+			"compressed" : true
+		},
+		"ActivityIconCommon_1.zip" : {
+			"md5" : "7777ae1a538f93eacd307cedc917df0a",
+			"compressed" : true
+		},
+		"MailInfoCommon_1.zip" : {
+			"md5" : "5c31b58dbd3d829d129f8f4f4186be4c",
+			"compressed" : true
+		},
+		"RechargePopHeadCommon_1.zip" : {
+			"md5" : "6908f224ea1aa8272064a9df0f457f37",
+			"compressed" : true
+		},
+		"RechargePageCommon_1.zip" : {
+			"md5" : "ea1008bfa9d4a08b25e66ca4ae2b82a0",
+			"compressed" : true
+		}
+	},
+    "searchPaths" : []
+}

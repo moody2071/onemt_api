@@ -1,0 +1,137 @@
+
+diaoyuxiaoyouxi.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+yu-dingji
+  rotate: false
+  xy: 447, 32
+  size: 247, 987
+  orig: 247, 987
+  offset: 0, 0
+  index: -1
+yu-gaoji
+  rotate: false
+  xy: 696, 66
+  size: 217, 953
+  orig: 217, 953
+  offset: 0, 0
+  index: -1
+yu-zhongji-gai
+  rotate: false
+  xy: 2, 2
+  size: 443, 1017
+  orig: 443, 1017
+  offset: 0, 0
+  index: -1
+yugan
+  rotate: false
+  xy: 915, 572
+  size: 53, 447
+  orig: 53, 447
+  offset: 0, 0
+  index: -1
+yuxian
+  rotate: true
+  xy: 447, 19
+  size: 11, 185
+  orig: 11, 185
+  offset: 0, 0
+  index: -1
+yuxian1
+  rotate: false
+  xy: 915, 122
+  size: 11, 448
+  orig: 11, 448
+  offset: 0, 0
+  index: -1
+
+diaoyuxiaoyouxi2.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+shou1
+  rotate: false
+  xy: 271, 324
+  size: 188, 500
+  orig: 188, 500
+  offset: 0, 0
+  index: -1
+shou3
+  rotate: false
+  xy: 2, 2
+  size: 272, 239
+  orig: 272, 239
+  offset: 0, 0
+  index: -1
+shuanshou02
+  rotate: true
+  xy: 461, 254
+  size: 187, 492
+  orig: 187, 492
+  offset: 0, 0
+  index: -1
+shuanshou03
+  rotate: true
+  xy: 461, 636
+  size: 188, 495
+  orig: 188, 495
+  offset: 0, 0
+  index: -1
+shuanshou04
+  rotate: true
+  xy: 461, 443
+  size: 191, 494
+  orig: 191, 494
+  offset: 0, 0
+  index: -1
+shuanshou06
+  rotate: true
+  xy: 276, 39
+  size: 213, 490
+  orig: 213, 490
+  offset: 0, 0
+  index: -1
+yu-zhongji
+  rotate: false
+  xy: 2, 243
+  size: 267, 773
+  orig: 267, 773
+  offset: 0, 0
+  index: -1
+yu1
+  rotate: true
+  xy: 276, 826
+  size: 190, 582
+  orig: 190, 582
+  offset: 0, 0
+  index: -1
+
+diaoyuxiaoyouxi3.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+shou2
+  rotate: false
+  xy: 390, 11
+  size: 167, 482
+  orig: 167, 482
+  offset: 0, 0
+  index: -1
+shuanshou01
+  rotate: false
+  xy: 202, 5
+  size: 186, 488
+  orig: 186, 488
+  offset: 0, 0
+  index: -1
+shuanshou05
+  rotate: false
+  xy: 2, 2
+  size: 198, 491
+  orig: 198, 491
+  offset: 0, 0
+  index: -1

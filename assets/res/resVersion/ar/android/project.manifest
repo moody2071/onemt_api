@@ -1,0 +1,32 @@
+{
+	"packageUrl" : "https://kohupdate.menaapp.net/hd_res/android_release_002/",
+	"remoteManifestUrl" : "https://kohupdate.menaapp.net/hd_res/android_release_002/project.manifest",
+	"remoteVersionUrl" : "https://kohupdate.menaapp.net/hd_res/android_release_002/version.manifest",
+	"version" : "1.2.001",
+	"engineVersion" : "3.0",
+	"isHDRes" : true,
+	"assets" : 
+	{
+		"ActivityBgCommon_1.zip" : {
+			"md5" : "00322592d0a945f71c51473eddcf5d4a",
+			"compressed" : true
+		},
+		"ActivityIconCommon_1.zip" : {
+			"md5" : "4d0f0d900326a08ce4d1f43e969a2cfa",
+			"compressed" : true
+		},
+		"MailInfoCommon_1.zip" : {
+			"md5" : "d9f8f34cf941eea97497b884db26b671",
+			"compressed" : true
+		},
+		"RechargePopHeadCommon_1.zip" : {
+			"md5" : "0fcc1d69f598dad4f5e6ab5d3b9812c4",
+			"compressed" : true
+		},
+		"RechargePageCommon_1.zip" : {
+			"md5" : "e8fe65ccb6075d87a38681ab4a96b617",
+			"compressed" : true
+		}
+	},
+    "searchPaths" : []
+}
