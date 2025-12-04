@@ -1,0 +1,82 @@
+.class public Lorg/apache/commons/lang3/concurrent/a$b;
+.super Lorg/apache/commons/lang3/concurrent/AbstractConcurrentInitializer$AbstractBuilder;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lorg/apache/commons/lang3/concurrent/a;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x9
+    name = "b"
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<I:",
+        "Lorg/apache/commons/lang3/concurrent/a<",
+        "TT;>;T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Lorg/apache/commons/lang3/concurrent/AbstractConcurrentInitializer$AbstractBuilder<",
+        "TI;TT;",
+        "Lorg/apache/commons/lang3/concurrent/a$b<",
+        "TI;TT;>;",
+        "Lorg/apache/commons/lang3/concurrent/ConcurrentException;",
+        ">;"
+    }
+.end annotation
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Lorg/apache/commons/lang3/concurrent/AbstractConcurrentInitializer$AbstractBuilder;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a()Lorg/apache/commons/lang3/concurrent/a;
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TI;"
+        }
+    .end annotation
+
+    new-instance v0, Lorg/apache/commons/lang3/concurrent/a;
+
+    invoke-virtual {p0}, Lorg/apache/commons/lang3/concurrent/AbstractConcurrentInitializer$AbstractBuilder;->getInitializer()Lorg/apache/commons/lang3/function/FailableSupplier;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lorg/apache/commons/lang3/concurrent/AbstractConcurrentInitializer$AbstractBuilder;->getCloser()Lorg/apache/commons/lang3/function/FailableConsumer;
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    invoke-direct {v0, v1, v2, v3}, Lorg/apache/commons/lang3/concurrent/a;-><init>(Lorg/apache/commons/lang3/function/FailableSupplier;Lorg/apache/commons/lang3/function/FailableConsumer;Lorg/apache/commons/lang3/concurrent/a$a;)V
+
+    return-object v0
+.end method
+
+.method public bridge synthetic get()Ljava/lang/Object;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/Throwable;
+        }
+    .end annotation
+
+    invoke-virtual {p0}, Lorg/apache/commons/lang3/concurrent/a$b;->a()Lorg/apache/commons/lang3/concurrent/a;
+
+    move-result-object v0
+
+    return-object v0
+.end method

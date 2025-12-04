@@ -1,0 +1,22 @@
+.class public interface abstract Lcom/onemt/sdk/media/PermissionChecker$PermissionCallback;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/onemt/sdk/media/PermissionChecker;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x609
+    name = "PermissionCallback"
+.end annotation
+
+
+# virtual methods
+.method public abstract onDenied(Ljava/lang/String;)V
+.end method
+
+.method public abstract onGranted()V
+.end method

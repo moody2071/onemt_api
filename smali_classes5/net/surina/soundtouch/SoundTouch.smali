@@ -1,0 +1,267 @@
+.class public final Lnet/surina/soundtouch/SoundTouch;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# instance fields
+.field public a:J
+
+
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 1
+
+    const-string v0, "soundtouch"
+
+    invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 2
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    .line 3
+    .line 4
+    const-wide/16 v0, 0x0
+
+    .line 5
+    .line 6
+    iput-wide v0, p0, Lnet/surina/soundtouch/SoundTouch;->a:J
+
+    .line 7
+    .line 8
+    invoke-static {}, Lnet/surina/soundtouch/SoundTouch;->newInstance()J
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-wide v0
+
+    .line 12
+    iput-wide v0, p0, Lnet/surina/soundtouch/SoundTouch;->a:J
+
+    .line 13
+    .line 14
+    return-void
+    .line 15
+    .line 16
+    .line 17
+    .line 18
+    .line 19
+    .line 20
+    .line 21
+    .line 22
+    .line 23
+    .line 24
+    .line 25
+    .line 26
+    .line 27
+    .line 28
+    .line 29
+    .line 30
+    .line 31
+    .line 32
+    .line 33
+    .line 34
+    .line 35
+    .line 36
+    .line 37
+    .line 38
+    .line 39
+    .line 40
+    .line 41
+    .line 42
+    .line 43
+    .line 44
+    .line 45
+    .line 46
+    .line 47
+    .line 48
+    .line 49
+    .line 50
+    .line 51
+    .line 52
+    .line 53
+    .line 54
+    .line 55
+    .line 56
+    .line 57
+    .line 58
+    .line 59
+    .line 60
+    .line 61
+    .line 62
+    .line 63
+    .line 64
+    .line 65
+    .line 66
+    .line 67
+    .line 68
+    .line 69
+    .line 70
+    .line 71
+    .line 72
+    .line 73
+    .line 74
+.end method
+
+.method private final native deleteInstance(J)V
+.end method
+
+.method public static final native getErrorString()Ljava/lang/String;
+.end method
+
+.method public static final native getVersionString()Ljava/lang/String;
+.end method
+
+.method private static final native newInstance()J
+.end method
+
+.method private final native processFile(JLjava/lang/String;Ljava/lang/String;)I
+.end method
+
+.method private final native setPitchSemiTones(JF)V
+.end method
+
+.method private final native setSpeed(JF)V
+.end method
+
+.method private final native setTempo(JF)V
+.end method
+
+
+# virtual methods
+.method public a()V
+    .locals 2
+
+    .line 1
+    iget-wide v0, p0, Lnet/surina/soundtouch/SoundTouch;->a:J
+
+    .line 2
+    .line 3
+    invoke-direct {p0, v0, v1}, Lnet/surina/soundtouch/SoundTouch;->deleteInstance(J)V
+
+    .line 4
+    .line 5
+    .line 6
+    const-wide/16 v0, 0x0
+
+    .line 7
+    .line 8
+    iput-wide v0, p0, Lnet/surina/soundtouch/SoundTouch;->a:J
+
+    .line 9
+    .line 10
+    return-void
+    .line 11
+    .line 12
+    .line 13
+    .line 14
+    .line 15
+    .line 16
+    .line 17
+    .line 18
+    .line 19
+    .line 20
+    .line 21
+    .line 22
+    .line 23
+    .line 24
+    .line 25
+    .line 26
+    .line 27
+    .line 28
+    .line 29
+    .line 30
+    .line 31
+    .line 32
+    .line 33
+    .line 34
+    .line 35
+    .line 36
+    .line 37
+    .line 38
+    .line 39
+    .line 40
+    .line 41
+    .line 42
+    .line 43
+    .line 44
+    .line 45
+    .line 46
+    .line 47
+    .line 48
+    .line 49
+    .line 50
+    .line 51
+    .line 52
+    .line 53
+    .line 54
+    .line 55
+    .line 56
+    .line 57
+    .line 58
+    .line 59
+    .line 60
+    .line 61
+    .line 62
+    .line 63
+    .line 64
+    .line 65
+    .line 66
+    .line 67
+    .line 68
+    .line 69
+    .line 70
+    .line 71
+    .line 72
+    .line 73
+    .line 74
+.end method
+
+.method public b(Ljava/lang/String;Ljava/lang/String;)I
+    .locals 2
+
+    iget-wide v0, p0, Lnet/surina/soundtouch/SoundTouch;->a:J
+
+    invoke-direct {p0, v0, v1, p1, p2}, Lnet/surina/soundtouch/SoundTouch;->processFile(JLjava/lang/String;Ljava/lang/String;)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public c(F)V
+    .locals 2
+
+    iget-wide v0, p0, Lnet/surina/soundtouch/SoundTouch;->a:J
+
+    invoke-direct {p0, v0, v1, p1}, Lnet/surina/soundtouch/SoundTouch;->setPitchSemiTones(JF)V
+
+    return-void
+.end method
+
+.method public d(F)V
+    .locals 2
+
+    iget-wide v0, p0, Lnet/surina/soundtouch/SoundTouch;->a:J
+
+    invoke-direct {p0, v0, v1, p1}, Lnet/surina/soundtouch/SoundTouch;->setSpeed(JF)V
+
+    return-void
+.end method
+
+.method public e(F)V
+    .locals 2
+
+    iget-wide v0, p0, Lnet/surina/soundtouch/SoundTouch;->a:J
+
+    invoke-direct {p0, v0, v1, p1}, Lnet/surina/soundtouch/SoundTouch;->setTempo(JF)V
+
+    return-void
+.end method
