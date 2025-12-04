@@ -1,0 +1,45 @@
+{
+  "title": {
+    "color": "#333333",
+    "size": "16",
+    "weight": "medium",
+    "style": "system",
+    "desc": "标题"
+  },
+  "primaryContent" : {
+    "color": "#333333",
+    "size": "14",
+    "weight": "regular",
+    "style": "system",
+    "desc": "高优先级正文内容"
+  },
+  "content": {
+    "color": "#333333",
+    "size": "14",
+    "weight": "regular",
+    "style": "system",
+    "desc": "正文内容"
+  },
+  "hyperlink": {
+    "color": "#407CB9",
+    "size": "14",
+    "weight": "regular",
+    "style": "system",
+    "desc": "超链接"
+  },
+  "primaryBtn": {
+    "color": "#FFFFFF",
+    "size": "15",
+    "weight": "regular",
+    "style": "system",
+    "desc": "高优先级按钮"
+  },
+  "secondaryBtn": {
+    "color": "#FFA030",
+    "size": "15",
+    "weight": "regular",
+    "style": "system",
+    "desc": "低优先级按钮"
+  }
+}
+
