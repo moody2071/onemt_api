@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/llOtherDriver" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/tvDriverLeft" android:background="@color/uc_common_bind_third_driver_horizontal_color" android:layout_width="0.0dip" android:layout_height="0.39999998dip" android:layout_weight="1.0" />
+    <TextView android:textSize="@dimen/uc_bind_other_label_text_size" android:textColor="@color/uc_bind_hint_label" android:id="@id/tvDriverLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="7.0dip" android:layout_marginRight="7.0dip" android:text="@string/sdk_uc_other_channel_info" />
+    <TextView android:id="@id/tvDriverRight" android:background="@color/uc_common_bind_third_driver_horizontal_color" android:layout_width="0.0dip" android:layout_height="0.39999998dip" android:layout_weight="1.0" />
+</LinearLayout>

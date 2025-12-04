@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="@dimen/uc_common_button_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:ellipsize="end" android:id="@id/tvEmail" android:paddingLeft="@dimen/uc_bind_account_status_end_margin" android:paddingRight="@dimen/uc_bind_account_status_start_margin" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="0.0dip" android:layout_marginRight="0.0dip" android:layout_weight="1.0" android:useBoundsForWidth="true" android:shiftDrawingOffsetForStartOverhang="true" style="@style/uc_login_dialog_account_status_theme" />
+    <RelativeLayout android:gravity="center_vertical" android:id="@id/rlLogo" android:paddingRight="@dimen/uc_third_party_vertical_list_item_horizontal_padding" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <ImageView android:id="@id/ivLogo" android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/uc_login_dialog_input_email_label" />
+    </RelativeLayout>
+</merge>

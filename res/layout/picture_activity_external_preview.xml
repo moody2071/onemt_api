@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/picture_color_black" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/titleViewBg" android:background="@color/picture_color_grey" android:layout_width="fill_parent" android:layout_height="48.0dip" />
+    <ImageButton android:id="@id/left_back" android:background="@color/picture_color_transparent" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/picture_icon_previcw_back" android:scaleType="centerInside" />
+    <TextView android:textSize="18.0sp" android:textColor="@color/picture_color_white" android:ellipsize="end" android:gravity="center" android:id="@id/picture_title" android:layout_width="wrap_content" android:layout_height="48.0dip" android:maxEms="11" android:layout_alignTop="@id/left_back" android:layout_alignBottom="@id/left_back" android:layout_centerHorizontal="true" />
+    <ImageButton android:id="@id/ib_delete" android:background="@color/picture_color_transparent" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/picture_icon_delete" android:scaleType="centerInside" android:layout_alignParentRight="true" />
+    <com.onemt.picture.lib.widget.PreviewViewPager android:id="@id/preview_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/titleViewBg" />
+</RelativeLayout>

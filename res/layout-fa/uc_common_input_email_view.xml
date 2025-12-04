@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/llRoot" android:background="@drawable/uc_common_input_underline_grey" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="@dimen/uc_common_input_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:gravity="center" android:id="@id/ivArrow" android:padding="@dimen/uc_email_input_arrow_btn_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/uc_email_input_arrow_selector" android:scaleType="centerInside" />
+    <ImageView android:id="@id/ivClose" android:padding="@dimen/uc_email_input_close_btn_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/uc_email_input_close_end_margin" android:src="@drawable/uc_email_input_clear" android:scaleType="centerInside" />
+    <EditText android:gravity="right" android:id="@id/etEmail" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="@string/sdk_email_info" android:layout_weight="1.0" android:inputType="textEmailAddress" style="@style/uc_common_underline_edittext" />
+    <ImageView android:visibility="gone" android:layout_marginRight="@dimen/uc_email_input_icon_start_margin" android:src="@drawable/uc_login_dialog_input_name_label" style="@style/uc_login_dialog_input_label_icon_theme" />
+</LinearLayout>

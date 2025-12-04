@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:background="@color/picker_bg" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center|right" android:layout_gravity="right" android:id="@id/topBackLl" android:layout_width="45.0dip" android:layout_height="45.0dip">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" android:src="@mipmap/topback" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:id="@id/tipLl" android:background="@color/picker_tip_bg" android:paddingLeft="12.0dip" android:paddingRight="12.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="48.0dip" android:paddingHorizontal="12.0dip">
+            <TextView android:textSize="15.0dip" android:textColor="@color/picker_manager_tx" android:gravity="left" android:id="@id/requestBt" android:layout_width="80.0dip" android:layout_height="wrap_content" android:text="@string/sdk_media_permission_manager" android:layout_weight="1.0" android:useBoundsForWidth="true" android:shiftDrawingOffsetForStartOverhang="true" />
+            <TextView android:textSize="13.0sp" android:textColor="@color/picker_tip_tx" android:id="@id/descTx" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sdk_media_permission_allow_partial" android:singleLine="false" android:layout_weight="0.0" android:useBoundsForWidth="true" android:shiftDrawingOffsetForStartOverhang="true" />
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/mediaRv" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout android:gravity="center_vertical" android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/multiCl" android:background="@color/picker_multi_bg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="42.0dip">
+        <TextView android:textSize="13.0sp" android:textColor="@color/picker_selected_tx" android:gravity="center_vertical" android:id="@id/multiChooseTv" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="12.0dip" android:useBoundsForWidth="true" android:shiftDrawingOffsetForStartOverhang="true" app:layout_constraintRight_toRightOf="parent" />
+        <TextView android:textSize="13.0sp" android:textStyle="bold" android:textColor="@color/picker_sure" android:gravity="center" android:id="@id/multiSureTv" android:background="@drawable/sure" android:layout_width="78.0dip" android:layout_height="28.0dip" android:layout_marginLeft="12.0dip" android:text="@string/sdk_media_message_multi_sure" android:useBoundsForWidth="true" android:shiftDrawingOffsetForStartOverhang="true" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/rl_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <com.onemt.sdk.user.base.widget.EmailVerifyCodeView android:id="@id/llVerifyCode" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/uc_login_dialog_input_box_bottom_margin" />
+    <com.onemt.sdk.user.base.widget.EmailPasswordView android:id="@id/llPwd" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/uc_login_dialog_input_box_bottom_margin" custom:pwdHint="@string/sdk_password_reg_inputbox" />
+    <TextView android:id="@id/tvPwdHint" android:visibility="gone" android:text="@string/sdk_uc_account_pwd_hint_new" style="@style/uc_common_pwd_hint_theme" />
+    <com.onemt.sdk.user.base.widget.SendButton android:id="@id/btnReg" android:layout_centerHorizontal="true" custom:buttonText="@string/sdk_sign_up_linkbutton" style="@style/uc_custom_state_button" />
+</LinearLayout>

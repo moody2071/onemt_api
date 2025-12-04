@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/rl_background" android:paddingLeft="@dimen/uc_common_content_area_lr_margin" android:paddingRight="@dimen/uc_common_content_area_lr_margin" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <TextView android:gravity="right" android:id="@id/tvContentTitle" android:useBoundsForWidth="true" android:shiftDrawingOffsetForStartOverhang="true" style="@style/uc_common_content_title_theme" />
+    <com.onemt.sdk.user.base.widget.EmailPasswordView android:id="@id/llSecurityPwd" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/uc_login_dialog_content_tiphint_margin_bottom" />
+    <RelativeLayout android:id="@id/rlOperation" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/tvResetSecurityPwd" android:text="@string/sdk_uc_forgot_security_pwd_linkbutton" android:layout_alignParentLeft="true" android:useBoundsForWidth="true" android:shiftDrawingOffsetForStartOverhang="true" style="@style/uc_login_dialog_link_btn_theme" />
+    </RelativeLayout>
+    <com.onemt.sdk.user.base.widget.SendButton android:id="@id/btnConfirmBtn" android:layout_centerHorizontal="true" style="@style/uc_custom_state_button" />
+    <LinearLayout android:orientation="vertical" android:id="@id/llOther" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/uc_close_security_pwd_other_label_top_margin">
+        <TextView android:textSize="@dimen/uc_bind_other_label_text_size" android:textColor="@color/uc_bind_hint_label" android:gravity="center_horizontal" android:id="@id/tvThirdLabel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sdk_uc_close_security_pwd_other_label" android:useBoundsForWidth="true" android:shiftDrawingOffsetForStartOverhang="true" />
+        <com.onemt.sdk.user.base.widget.UCNormalIconButton android:id="@id/btnEmail" android:layout_marginTop="@dimen/uc_close_security_pwd_other_label_bottom_margin" custom:ucIconBtnIcon="@drawable/uc_disable_security_code_btn_email_icon" custom:ucIconBtnText="@string/sdk_uc_btn_mail_verified" style="@style/uc_change_button" />
+        <com.onemt.sdk.user.base.widget.UCNormalIconButton android:id="@id/btnMobile" custom:ucIconBtnIcon="@drawable/uc_disable_security_code_btn_phone_icon" custom:ucIconBtnText="@string/sdk_uc_btn_mobile_binded" style="@style/uc_change_button" />
+    </LinearLayout>
+</LinearLayout>

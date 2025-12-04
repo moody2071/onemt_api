@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:layout_gravity="center" android:orientation="vertical" android:id="@id/llRoot" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/ivLogo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/uc_login_dialog_logo_top_margin_third" android:src="@drawable/uc_login_dialog_logo" />
+    <include layout="@layout/uc_login_dialog_third_party_button" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/llInputArea" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/uc_login_dialog_content_area_lr_margin" android:layout_marginTop="@dimen/uc_login_dialog_email_top_margin" android:layout_marginRight="@dimen/uc_login_dialog_content_area_lr_margin" android:layout_marginBottom="@dimen/uc_login_dialog_email_bottom_margin">
+        <FrameLayout android:id="@id/subContainer" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <TextView android:id="@id/tvThirdLabel" android:text="@string/sdk_uc_other_login_info" style="@style/uc_login_other_method_hint_label" />
+    <com.onemt.sdk.user.base.widget.ThirdPartyRecyclerView android:id="@id/rvThird" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/uc_login_third_list_top_margin" android:layout_marginBottom="@dimen/uc_login_third_list_bottom_margin" />
+</LinearLayout>

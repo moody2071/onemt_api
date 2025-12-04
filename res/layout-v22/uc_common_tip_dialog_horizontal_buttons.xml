@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:textColor="@color/uc_login_dialog_link_button_font_color" android:id="@id/btnCancel" android:background="@drawable/uc_login_dialog_cancel_btn_selector" android:layout_width="0.0dip" android:text="CANCEL" android:layout_weight="1.0" android:textAllCaps="false" android:outlineProvider="none" style="@style/uc_common_tip_dialog_btn_theme" />
+    <TextView android:id="@id/tvDriver" android:layout_width="@dimen/uc_tip_dialog_buttons_driver_interval" android:layout_height="wrap_content" android:useBoundsForWidth="true" android:shiftDrawingOffsetForStartOverhang="true" />
+    <Button android:textColor="@color/omt_sdk_white" android:id="@id/btnConfirm" android:background="@drawable/uc_login_dialog_done_btn_selector" android:layout_width="0.0dip" android:text="OK" android:layout_weight="1.0" android:textAllCaps="false" android:outlineProvider="none" style="@style/uc_common_tip_dialog_btn_theme" />
+</LinearLayout>

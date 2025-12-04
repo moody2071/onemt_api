@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:focusable="true" android:focusableInTouchMode="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <com.onemt.sdk.user.base.widget.AreaMobileInputEnableAutofillView android:id="@id/llArea" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:mobileHint="@string/sdk_uc_mobile_inputbox" />
+    <EditText android:layout_gravity="start" android:id="@id/etAutofillPassword" android:focusable="false" android:layout_width="1.0px" android:layout_height="1.0px" android:inputType="textPassword" style="@style/uc_common_underline_edittext" />
+    <com.onemt.sdk.user.base.widget.SendButton android:id="@id/btnNext" custom:buttonText="@string/sdk_uc_btn_next" style="@style/uc_login_dialog_custom_btn_theme" />
+</LinearLayout>

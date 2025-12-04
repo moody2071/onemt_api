@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingRight="@dimen/uc_popup_item_padding_start" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/vDivider" android:background="@color/uc_common_email_list_popup_item_divider_color" android:layout_width="fill_parent" android:layout_height="0.5dip" android:useBoundsForWidth="true" android:shiftDrawingOffsetForStartOverhang="true" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/uc_popup_item_horizontal_padding" android:paddingTop="@dimen/uc_popup_item_vertical_padding" android:paddingBottom="@dimen/uc_popup_item_vertical_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/uc_popup_item_height">
+        <ImageView android:id="@id/ivClose" android:paddingRight="@dimen/uc_popup_item_horizontal_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/uc_email_input_clear" />
+        <TextView android:gravity="center|right" android:id="@id/tvEmail" android:useBoundsForWidth="true" android:shiftDrawingOffsetForStartOverhang="true" style="@style/uc_email_list_popup_item_txt_theme" />
+    </LinearLayout>
+</LinearLayout>

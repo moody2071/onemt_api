@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/omt_sdk_uc_tip_dialog_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/omt_sdk_main_text" android:textColor="@color/omt_sdk_uc_prompt_dialog_content" android:gravity="right" android:id="@id/warn_text_tv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/omt_sdk_uc_tip_dialog_content_margin" android:layout_marginTop="@dimen/omt_sdk_uc_tip_dialog_content_margin" android:layout_marginRight="@dimen/omt_sdk_uc_tip_dialog_content_margin" android:text="@string/sdk_found_game_data_for_google_tooltip" android:lineSpacingExtra="@dimen/omt_sdk_uc_tip_dialog_content_line_spacing_extra" android:useBoundsForWidth="true" android:shiftDrawingOffsetForStartOverhang="true" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/omt_sdk_uc_tip_dialog_button_group_margin_top" android:layout_marginBottom="@dimen/omt_sdk_uc_tip_dialog_button_group_margin_bottom">
+        <Button android:id="@id/btnContinue" android:layout_marginRight="@dimen/omt_sdk_uc_tip_dialog_button_right_margin" android:text="@string/sdk_found_game_data_for_google_cancel_button" style="@style/OmtSdkUcTipDialogCancelButton" />
+        <Button android:id="@id/btnSwitch" android:text="@string/sdk_found_game_data_for_google_switch_button" style="@style/OmtSdkUcTipDialogConfirmButton" />
+    </LinearLayout>
+</LinearLayout>

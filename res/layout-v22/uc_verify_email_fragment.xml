@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/llVerifyEmailArea" android:paddingLeft="@dimen/uc_common_content_area_lr_margin" android:paddingRight="@dimen/uc_common_content_area_lr_margin" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <TextView android:gravity="left" android:id="@id/tvContentTitle" android:useBoundsForWidth="true" android:shiftDrawingOffsetForStartOverhang="true" style="@style/uc_common_content_title_theme" />
+    <TextView android:id="@id/tvHint" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/uc_login_dialog_content_area_top_margin" android:text="@string/sdk_email_verified_confirmation_tooltip" android:useBoundsForWidth="true" android:shiftDrawingOffsetForStartOverhang="true" style="@style/uc_common_content_hint_theme" />
+    <com.onemt.sdk.user.base.widget.EmailInputView android:id="@id/llEmail" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.onemt.sdk.user.base.widget.SendButton android:id="@id/btnNext" android:layout_marginBottom="@dimen/uc_bind_step_one_next_button_bottom_margin" custom:buttonText="@string/sdk_send_button" style="@style/uc_custom_state_button" />
+</LinearLayout>

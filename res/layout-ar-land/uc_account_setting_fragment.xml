@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="11.0sp" android:textColor="#ff666666" android:gravity="right" android:layout_gravity="right" android:id="@id/tvContentTitle" android:paddingRight="18.0dip" android:layout_marginLeft="@dimen/uc_login_dialog_account_setting_item_left_margin" android:layout_marginRight="@dimen/uc_login_dialog_account_setting_item_right_margin" android:layout_marginBottom="8.0dip" style="@style/uc_common_content_title_theme" />
+    <androidx.core.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/uc_login_dialog_account_setting_item_left_margin" android:layout_marginRight="@dimen/uc_login_dialog_account_setting_item_right_margin">
+            <LinearLayout android:orientation="vertical" android:background="@drawable/uc_account_item_bg" android:paddingLeft="12.0dip" android:paddingRight="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:id="@id/rlEmail" style="@style/uc_login_dialog_account_setting_list_item_theme">
+                    <ImageView android:id="@id/iv_email_icon" android:src="@drawable/uc_login_dialog_list_item_email_label" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/uc_login_dialog_account_setting_list_item_icon_theme" />
+                    <TextView android:gravity="right" android:id="@id/tvEmail" android:layout_marginRight="0.0dip" android:text="@string/sdk_email_info" android:layout_toLeftOf="@id/iv_email_icon" android:layout_toRightOf="@id/ivEmailUcheck" style="@style/uc_login_dialog_account_setting_list_item_label_theme" />
+                    <ImageView android:id="@id/ivEmailUcheck" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/uc_login_dialog_list_item_red_dot" android:layout_toRightOf="@id/ivEmailArror" android:layout_centerVertical="true" />
+                    <ImageView android:id="@id/ivEmailArror" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/uc_login_dialog_list_item_arrow_left" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                    <TextView android:background="@color/uc_login_dialog_account_setting_item_driver_color" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_alignParentBottom="true" />
+                </RelativeLayout>
+                <RelativeLayout android:id="@id/rlMobile" style="@style/uc_login_dialog_account_setting_list_item_theme">
+                    <ImageView android:id="@id/iv_mobile_icon" android:src="@drawable/uc_login_dialog_list_item_phone_label" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/uc_login_dialog_account_setting_list_item_icon_theme" />
+                    <TextView android:id="@id/tvMobile" android:text="@string/sdk_uc_mobile_label" android:layout_toLeftOf="@id/iv_mobile_icon" android:layout_toRightOf="@id/ivMobileUcheck" style="@style/uc_login_dialog_account_setting_list_item_label_theme" />
+                    <ImageView android:id="@id/ivMobileUcheck" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/uc_login_dialog_list_item_red_dot" android:layout_toRightOf="@id/ivMobileArror" android:layout_centerVertical="true" />
+                    <ImageView android:id="@id/ivMobileArror" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/uc_login_dialog_list_item_arrow_left" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                    <TextView android:background="@color/uc_login_dialog_account_setting_item_driver_color" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_alignParentBottom="true" />
+                </RelativeLayout>
+                <RelativeLayout android:id="@id/rlSecurity" style="@style/uc_login_dialog_account_setting_list_item_theme">
+                    <ImageView android:id="@id/iv_security_icon" android:src="@mipmap/security" android:layout_alignParentRight="true" style="@style/uc_login_dialog_account_setting_list_item_icon_theme" />
+                    <TextView android:id="@id/securityTv" android:text="@string/sdk_uc_setting_psw_safe" android:layout_toLeftOf="@id/iv_security_icon" style="@style/uc_login_dialog_account_setting_list_item_label_theme" />
+                    <androidx.appcompat.widget.SwitchCompat android:id="@id/switchSecurityPwd" android:background="@null" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:thumb="@drawable/uc_login_dialog_switch_thumb_selector" android:layout_alignParentLeft="true" android:layout_centerVertical="true" app:showText="false" app:switchMinWidth="@dimen/uc_login_dialog_account_setting_switch_min_width" app:track="@drawable/uc_login_dialog_switch_track_selector" />
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/uc_login_dialog_list_item_arrow_left" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@drawable/uc_account_item_bg" android:paddingLeft="12.0dip" android:paddingRight="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+                <RelativeLayout android:id="@id/rlAccountInfo" style="@style/uc_login_dialog_account_setting_list_item_theme">
+                    <ImageView android:id="@id/iv_account_info_icon" android:src="@mipmap/accountinfo" android:layout_alignParentRight="true" style="@style/uc_login_dialog_account_setting_list_item_icon_theme" />
+                    <TextView android:text="@string/sdk_uc_setting_info" android:layout_toLeftOf="@id/iv_account_info_icon" style="@style/uc_login_dialog_account_setting_list_item_label_theme" />
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/uc_login_dialog_list_item_arrow_left" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                    <TextView android:background="@color/uc_login_dialog_account_setting_item_driver_color" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_alignParentBottom="true" />
+                </RelativeLayout>
+                <RelativeLayout android:id="@id/rlAccountDelete" style="@style/uc_login_dialog_account_setting_list_item_theme">
+                    <ImageView android:id="@id/iv_unregister_account_icon" android:src="@drawable/uc_login_dialog_list_item_delete_label" android:layout_alignParentRight="true" style="@style/uc_login_dialog_account_setting_list_item_icon_theme" />
+                    <TextView android:id="@id/dataTv" android:text="@string/sdk_uc_setting_data_delete" android:layout_toLeftOf="@id/iv_unregister_account_icon" style="@style/uc_login_dialog_account_setting_list_item_label_theme" />
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/uc_login_dialog_list_item_arrow_left" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

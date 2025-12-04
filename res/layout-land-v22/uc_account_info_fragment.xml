@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@color/uc_account_info_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="24.0dip" android:layout_marginRight="24.0dip" android:layout_marginHorizontal="24.0dip">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/uc_account_title_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginBottom="12.0dip" android:text="@string/sdk_uc_setting_info" android:useBoundsForWidth="true" android:shiftDrawingOffsetForStartOverhang="true" />
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/accountErrLl" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageView android:layout_width="46.0dip" android:layout_height="46.0dip" android:layout_marginTop="78.0dip" android:src="@mipmap/neterror" />
+                <TextView android:textSize="13.0sp" android:textColor="#ff8e8e8e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/sdk_uc_setting_info_net_error" android:useBoundsForWidth="true" android:shiftDrawingOffsetForStartOverhang="true" />
+                <TextView android:textSize="14.0sp" android:textColor="#fff7931c" android:id="@id/accountRetryTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="@string/sdk_retry_button" android:useBoundsForWidth="true" android:shiftDrawingOffsetForStartOverhang="true" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/accountContentLl" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.onemt.sdk.user.ui.setting.widget.SettingItemWidget android:id="@id/birthdayAw" android:background="@drawable/uc_account_item_bg" android:layout_width="fill_parent" android:layout_height="46.0dip" custom:ucIcon="@mipmap/birth" custom:ucLabel="@string/sdk_uc_setting_info_birthday" />
+                <LinearLayout android:orientation="vertical" android:background="@drawable/uc_account_item_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+                    <com.onemt.sdk.user.ui.setting.widget.SettingItemWidget android:id="@id/phoneAw" android:layout_width="fill_parent" android:layout_height="46.0dip" custom:ucIcon="@mipmap/phone" custom:ucLabel="@string/sdk_uc_setting_info_mobile" custom:ucShowDivider="true" />
+                    <com.onemt.sdk.user.ui.setting.widget.SettingItemWidget android:id="@id/whatsAw" android:layout_width="fill_parent" android:layout_height="46.0dip" custom:ucIcon="@mipmap/whatsapp" custom:ucLabel="@string/sdk_uc_whatsapp" custom:ucShowDivider="true" />
+                    <com.onemt.sdk.user.ui.setting.widget.SettingItemWidget android:id="@id/lineAw" android:layout_width="fill_parent" android:layout_height="46.0dip" custom:ucIcon="@mipmap/line" custom:ucLabel="@string/sdk_uc_line" custom:ucShowDivider="true" />
+                    <com.onemt.sdk.user.ui.setting.widget.SettingItemWidget android:id="@id/discordAw" android:layout_width="fill_parent" android:layout_height="46.0dip" custom:ucIcon="@mipmap/discord" custom:ucLabel="@string/sdk_uc_discord" custom:ucShowDivider="false" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+                    <ImageView android:id="@id/personalDotIv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:layout_marginRight="9.0dip" android:src="@drawable/uc_personal_dot" />
+                    <TextView android:textSize="12.0sp" android:textColor="@color/uc_account_tip_color" android:id="@id/tipTx" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sdk_uc_setting_info_tip" android:useBoundsForWidth="true" android:shiftDrawingOffsetForStartOverhang="true" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

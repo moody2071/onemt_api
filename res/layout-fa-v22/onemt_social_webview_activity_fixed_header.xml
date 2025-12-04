@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/webview_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/webview_header_container" android:background="@color/omt_sdk_social_webview_header_bg" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <ImageView android:id="@id/header_close_btn" android:paddingLeft="10.0dip" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/omt_sdk_social_webview_header_close_btn" android:layout_above="@id/line" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/header_back_btn" android:paddingLeft="5.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/omt_sdk_social_webview_header_back_btn" android:layout_above="@id/line" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+        <TextView android:textSize="18.0sp" android:textColor="#ff333333" android:ellipsize="end" android:gravity="center" android:id="@id/header_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:maxLines="2" android:layout_toLeftOf="@id/header_back_btn" android:layout_toRightOf="@id/header_close_btn" android:layout_above="@id/line" android:layout_alignParentTop="true" android:useBoundsForWidth="true" android:shiftDrawingOffsetForStartOverhang="true" />
+        <View android:id="@id/line" android:background="#ff9f9f9f" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" android:alpha="0.2" />
+    </RelativeLayout>
+    <FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/containerLl" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.onemt.sdk.social.web.SocialWebView android:id="@id/web_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/llFail" android:background="@color/omt_sdk_social_webview_fail_bg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/omt_sdk_social_open_failed" />
+            <TextView android:textSize="15.0sp" android:textColor="#ff95969a" android:gravity="center" android:id="@id/tvLoadFailed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="28.0dip" android:useBoundsForWidth="true" android:shiftDrawingOffsetForStartOverhang="true" />
+        </LinearLayout>
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/loading" android:background="@drawable/sdk_web_loading" android:layout_width="28.0dip" android:layout_height="28.0dip" />
+    </FrameLayout>
+</LinearLayout>

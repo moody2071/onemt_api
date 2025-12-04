@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/llRoot" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.onemt.sdk.user.base.widget.SearchInputView android:id="@id/searchView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" android:layout_marginBottom="15.0dip" android:layout_alignParentTop="true" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rvCountry" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/searchView" android:layout_alignParentBottom="true" android:overScrollMode="ifContentScrolls" />
+    <TextView android:id="@id/tvEmptyHint" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sdk_choose_country_search_empty_tip" android:layout_centerInParent="true" style="@style/uc_country_search_empty_hint_theme" />
+</RelativeLayout>

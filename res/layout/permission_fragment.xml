@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/container" android:background="#99000000" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/guideDialog" android:background="@drawable/permission_bg" android:paddingTop="22.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="34.0dip" android:layout_marginRight="34.0dip">
+        <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="#ff333333" android:layout_gravity="center_horizontal" android:id="@id/tipsTx" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" android:text="tips" />
+        <EditText android:enabled="false" android:textSize="14.0sp" android:textColor="#ff333333" android:id="@id/contentTv" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="24.0dip" android:text="content" />
+        <View android:background="#ffe1e1e1" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="42.0dip">
+            <TextView android:textSize="15.0sp" android:textColor="#ff999999" android:gravity="center" android:id="@id/closeTv" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/sdk_permission_close" android:layout_weight="1.0" />
+            <View android:id="@id/spacer" android:background="#ffe1e1e1" android:layout_width="1.0px" android:layout_height="fill_parent" />
+            <TextView android:textSize="15.0sp" android:textColor="#ffffa030" android:gravity="center" android:id="@id/settingTv" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/sdk_permission_setting" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

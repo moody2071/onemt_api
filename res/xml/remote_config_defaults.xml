@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap>
+    <entry>
+        <key>Will_Churn</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>Will_Pay</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>Will_Tutorial</key>
+        <value>false</value>
+    </entry>
+</defaultsMap>

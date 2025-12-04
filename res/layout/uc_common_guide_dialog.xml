@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#30000000" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="20.0sp" android:textColor="@color/omt_sdk_white" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tvTitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sdk_switch_account_button_tip" android:layout_weight="1.0" android:layout_above="@id/ivArrow" android:layout_centerHorizontal="true" />
+    <ImageView android:id="@id/ivArrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/uc_login_dialog_guide_arrow" android:layout_above="@id/btnSwitch" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="18.0sp" android:textColor="@color/uc_login_switch_account_guide_label" android:gravity="center" android:id="@id/btnSwitch" android:background="@drawable/uc_common_guide_btn_white" android:paddingLeft="@dimen/uc_common_content_area_lr_margin" android:paddingRight="@dimen/uc_common_content_area_lr_margin" android:layout_width="wrap_content" android:layout_height="44.0dip" android:layout_marginBottom="@dimen/uc_guide_switch_account_label_bottom_margin" android:text="@string/sdk_switch_account_button" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:textAllCaps="false" />
+</RelativeLayout>

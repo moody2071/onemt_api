@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/toolbarViewBg" android:background="@color/picture_color_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="32.0dip" />
+    <View android:id="@id/titleViewBg" android:background="@color/picture_color_background" android:layout_width="fill_parent" android:layout_height="45.0dip" android:layout_below="@id/toolbarViewBg" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/rlAlbum" android:background="@drawable/picture_album_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:layout_below="@id/toolbarViewBg" android:layout_centerHorizontal="true">
+        <ImageView android:id="@id/ivArrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:layout_marginRight="6.0dip" android:src="@drawable/picture_icon_new_down" android:layout_centerVertical="true" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/picture_color_toolar_font" android:gravity="center" android:id="@id/picture_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sdk_all_photo_title" android:layout_centerVertical="true" />
+    </LinearLayout>
+    <TextView android:textSize="14.0sp" android:textColor="@color/picture_color_white" android:gravity="center" android:id="@id/picture_right" android:padding="10.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="48.0dip" android:text="@string/picture_cancel" android:layout_alignParentRight="true" />
+    <ImageView android:id="@id/picture_left_back" android:paddingTop="10.0dip" android:paddingRight="32.0dip" android:paddingBottom="10.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/picture_select_back_bg" android:layout_alignTop="@id/titleViewBg" android:layout_alignBottom="@id/titleViewBg" android:layout_alignParentRight="true" />
+</merge>

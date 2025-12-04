@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="20.0dip" android:paddingTop="10.0dip" android:paddingRight="20.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.onemt.sdk.cmp.onemt.view.CusFontTextView android:layout_gravity="center_horizontal" android:id="@id/collectTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sdk_cmp_checkbox_auth" app:cusFontStyle="title" />
+    <com.onemt.sdk.cmp.onemt.view.CusFontTextView android:gravity="right" android:paddingLeft="8.0dip" android:paddingTop="4.0dip" android:paddingRight="8.0dip" android:paddingBottom="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="@string/sdk_cmp_statement_auth_collect_android" app:cusFontStyle="content" />
+</LinearLayout>

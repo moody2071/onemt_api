@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/uc_login_dialog_input_search_bg" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="@dimen/uc_country_search_input_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/ivClose" android:padding="@dimen/uc_email_input_close_btn_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/uc_email_input_close_end_margin" android:src="@drawable/uc_email_input_clear" android:scaleType="centerInside" />
+    <EditText android:gravity="center|right" android:id="@id/etSearch" android:paddingTop="0.0dip" android:paddingBottom="0.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="" android:layout_weight="1.0" android:imeOptions="actionSearch|flagNoExtractUi" style="@style/uc_login_dialog_edittext" />
+    <ImageView android:layout_width="@dimen/uc_country_search_icon_size" android:layout_height="@dimen/uc_country_search_icon_size" android:layout_marginRight="@dimen/uc_country_search_icon_left_margin" android:src="@drawable/uc_login_dialog_input_search_label" />
+</LinearLayout>

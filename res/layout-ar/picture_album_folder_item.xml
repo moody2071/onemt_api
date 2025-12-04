@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@drawable/picture_item_select_bg" android:padding="1.0px" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/first_image" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    <TextView android:id="@id/tv_sign" android:background="@drawable/picture_orange_oval" android:visibility="invisible" android:layout_width="12.0dip" android:layout_height="12.0dip" android:layout_margin="4.0dip" android:layout_alignLeft="@id/first_image" />
+    <TextView android:textSize="16.0sp" android:textColor="@color/picture_color_font" android:id="@id/tv_folder_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="11.0dip" android:layout_marginRight="13.0dip" android:text="" android:layout_toLeftOf="@id/first_image" />
+    <TextView android:textSize="16.0sp" android:textColor="@color/picture_color_num" android:id="@id/tv_folder_num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="11.0dip" android:layout_marginRight="8.0dip" android:text="(%1$d)" android:layout_toLeftOf="@id/tv_folder_name" />
+    <View android:background="@color/picture_color_77787b" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="2.0dip" android:layout_below="@id/first_image" />
+</RelativeLayout>

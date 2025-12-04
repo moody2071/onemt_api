@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/llResetPwdArea" android:paddingLeft="@dimen/uc_common_content_area_lr_margin" android:paddingRight="@dimen/uc_common_content_area_lr_margin" android:paddingBottom="@dimen/uc_common_content_area_padding_bottom" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <TextView android:gravity="left" android:layout_gravity="left" android:id="@id/tvContentTitle" android:layout_marginBottom="@dimen/uc_login_dialog_content_tiphint_margin_bottom" style="@style/uc_common_content_title_theme" />
+    <com.onemt.sdk.user.base.widget.EmailInputView android:id="@id/llEmail" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.onemt.sdk.user.base.widget.EmailVerifyCodeView android:id="@id/llEmailVerifyCode" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/uc_login_dialog_input_box_bottom_margin" />
+    <com.onemt.sdk.user.base.widget.EmailPasswordView android:id="@id/llNewPwd" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/uc_login_dialog_input_box_bottom_margin" />
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/tvPwdHint" android:visibility="gone" android:text="@string/sdk_uc_account_pwd_hint_new" custom:layout_constraintLeft_toLeftOf="parent" custom:layout_constraintRight_toRightOf="parent" custom:layout_constraintTop_toTopOf="parent" style="@style/uc_common_pwd_hint_theme" />
+        <com.onemt.sdk.user.base.widget.SendButton android:id="@id/btnConfirm" android:layout_marginTop="@dimen/uc_done_button_small_top_margin" custom:layout_constraintLeft_toLeftOf="parent" custom:layout_constraintRight_toRightOf="parent" custom:layout_constraintTop_toBottomOf="@id/tvPwdHint" custom:layout_goneMarginTop="@dimen/uc_done_button_top_margin" style="@style/uc_custom_state_button" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

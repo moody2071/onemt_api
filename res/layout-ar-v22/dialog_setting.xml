@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:textColor="@android:color/black" android:id="@id/messageTextView" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sdk_media_permission_disallow_setting" android:useBoundsForWidth="true" android:shiftDrawingOffsetForStartOverhang="true" />
+    <Button android:textColor="@color/picker_dialog_button_tx" android:id="@id/positiveButton" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sdk_media_permission_setting" android:layout_below="@id/messageTextView" android:layout_alignParentLeft="true" />
+    <Button android:textColor="@color/picker_dialog_button_tx" android:id="@id/negativeButton" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sdk_media_permission_cancel" android:layout_toRightOf="@id/positiveButton" android:layout_below="@id/messageTextView" />
+</RelativeLayout>

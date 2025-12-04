@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/uc_bind_button_bg_selector" android:paddingLeft="@dimen/uc_bind_third_party_item_grid_horizontal_padding" android:paddingRight="@dimen/uc_bind_third_party_item_grid_horizontal_padding" android:layout_width="fill_parent" android:layout_height="@dimen/uc_third_list_item_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/ivIcon" android:layout_width="@dimen/uc_bind_third_party_item_grid_icon_size" android:layout_height="@dimen/uc_bind_third_party_item_grid_icon_size" android:layout_marginRight="@dimen/uc_bind_third_party_item_grid_icon_margin" android:src="@drawable/omt_sdk_uc_fb_icon" />
+    <TextView android:textSize="@dimen/uc_bind_third_party_item_grid_text_size" android:textColor="@color/omt_sdk_black" android:ellipsize="end" android:id="@id/tvName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" />
+</LinearLayout>

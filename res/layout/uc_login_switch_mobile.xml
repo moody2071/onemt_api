@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <com.onemt.sdk.user.base.widget.AreaMobileInputEnableAutofillView android:id="@id/llArea" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.onemt.sdk.user.base.widget.EmailPasswordEnableAutofillView android:id="@id/etAutofillPassword" android:layout_width="1.0px" android:layout_height="1.0px" custom:pwdHint="@string/sdk_password_login_inputbox" />
+    <FrameLayout android:id="@id/subContainer" android:focusable="true" android:focusableInTouchMode="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+</LinearLayout>

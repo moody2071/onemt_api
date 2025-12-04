@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/ucrop_frame" android:background="@color/omt_sdk_black" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center" android:id="@id/image_view_logo" android:background="@color/omt_sdk_black" android:layout_width="200.0dip" android:layout_height="200.0dip" />
+        <com.onemt.sdk.portrait.crop.UCropView android:id="@id/ucrop" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/ucrop_content" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

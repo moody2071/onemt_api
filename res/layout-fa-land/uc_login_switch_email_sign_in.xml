@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <TextView android:layout_gravity="left" android:id="@id/tvForgetPassword" android:text="@string/sdk_forgot_password_linkbutton" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" style="@style/uc_login_dialog_link_btn_theme" />
+    <com.onemt.sdk.user.base.widget.SendButton android:id="@id/btnSignIn" android:layout_marginTop="@dimen/uc_done_button_small_top_margin" android:layout_below="@id/tvForgetPassword" android:layout_centerHorizontal="true" custom:buttonText="@string/sdk_login_button" style="@style/uc_custom_state_button" />
+</RelativeLayout>

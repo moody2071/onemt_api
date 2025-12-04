@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/uc_login_reg_label_top_margin"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/tvForget" android:text="@string/sdk_uc_forget_password_view_title" style="@style/uc_login_dialog_link_button" />
+    <TextView android:text="|" style="@style/uc_login_dialog_link_button" />
+    <TextView android:id="@id/tvReg" android:text="@string/sdk_sign_up_linkbutton" style="@style/uc_login_dialog_link_button" />
+</LinearLayout>

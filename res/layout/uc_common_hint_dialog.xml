@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:id="@id/llRoot" android:background="@drawable/uc_login_dialog_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/uc_common_tip_dialog_content_lr_padding" android:paddingRight="@dimen/uc_common_tip_dialog_content_lr_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/uc_common_tip_dialog_title_top_margin">
+        <TextView android:id="@id/tvTitle" android:visibility="gone" style="@style/uc_common_hint_dialog_title_theme" />
+        <TextView android:id="@id/tvContent" style="@style/uc_common_hint_dialog_content_theme" />
+        <Button android:id="@id/btnConfirm" android:layout_marginTop="20.0dip" android:layout_marginBottom="20.0dip" android:text="@string/sdk_confirm_button" android:textAllCaps="false" style="@style/uc_common_tip_dialog_btn_theme" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="right" android:id="@id/ivClose" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/uc_dialog_close" />
+</FrameLayout>

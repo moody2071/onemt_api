@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/preview_toolbarViewBg" android:background="@color/picture_color_black_30" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="32.0dip" />
+    <View android:id="@id/titleViewBg" android:background="@color/picture_color_black_30" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="45.0dip" android:layout_below="@id/preview_toolbarViewBg" />
+    <TextView android:textSize="18.0sp" android:textColor="@color/picture_color_white" android:ellipsize="end" android:gravity="center" android:id="@id/picture_title" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="45.0dip" android:maxEms="11" />
+    <ImageView android:id="@id/picture_left_back" android:padding="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/picture_preview_back_bg" android:layout_alignTop="@id/titleViewBg" android:layout_alignBottom="@id/titleViewBg" />
+    <TextView android:textSize="12.0sp" android:textColor="@color/picture_color_white" android:gravity="center" android:id="@id/check" android:background="@drawable/picture_checkbox_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="13.0dip" android:layout_marginRight="16.0dip" android:layout_alignTop="@id/titleViewBg" android:layout_alignParentRight="true" />
+    <View android:id="@id/btnCheck" android:background="@color/picture_color_transparent" android:layout_width="45.0dip" android:layout_height="45.0dip" android:layout_marginTop="13.0dip" android:layout_marginRight="16.0dip" android:layout_alignParentRight="true" />
+</merge>

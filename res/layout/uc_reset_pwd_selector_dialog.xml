@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/llSubContent" android:background="@drawable/uc_login_dialog_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_gravity="center_vertical" android:id="@id/rlMobile" android:tag="mobile" android:paddingLeft="@dimen/uc_reset_dialog_content_area_l_margin" android:paddingTop="@dimen/uc_reset_dialog_item_tp_padding" android:paddingRight="@dimen/uc_reset_dialog_content_area_r_margin" android:paddingBottom="@dimen/uc_reset_dialog_item_tp_padding" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/ivMobile" android:layout_width="@dimen/uc_reset_dialog_item_icon_size" android:layout_height="@dimen/uc_reset_dialog_item_icon_size" android:src="@drawable/uc_login_dialog_btn_phone_icon_label" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/uc_reset_dialog_text_l_margin" android:layout_toLeftOf="@id/ivMobileArror" android:layout_toRightOf="@id/ivMobile" android:layout_centerVertical="true">
+                <TextView android:text="@string/sdk_uc_mobile_binded" style="@style/uc_reset_dialog_item_title_theme" />
+                <TextView android:id="@id/tvPhoneSubTitle" android:layout_marginTop="4.0dip" android:text="@string/sdk_uc_reset_from_mobile" style="@style/uc_reset_dialog_item_text_theme" />
+            </LinearLayout>
+            <ImageView android:id="@id/ivMobileArror" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/uc_login_dialog_list_item_arrow_left" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <TextView android:id="@id/hDividerEmail" android:background="#ffeeeeee" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+        <RelativeLayout android:layout_gravity="center_vertical" android:id="@id/rlEmail" android:tag="email" android:paddingLeft="@dimen/uc_reset_dialog_content_area_l_margin" android:paddingTop="@dimen/uc_reset_dialog_item_tp_padding" android:paddingRight="@dimen/uc_reset_dialog_content_area_r_margin" android:paddingBottom="@dimen/uc_reset_dialog_item_tp_padding" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/ivEmail" android:layout_width="@dimen/uc_reset_dialog_item_icon_size" android:layout_height="@dimen/uc_reset_dialog_item_icon_size" android:src="@drawable/uc_login_dialog_btn_email_icon_label" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/uc_reset_dialog_text_l_margin" android:layout_toLeftOf="@id/ivEmailArror" android:layout_toRightOf="@id/ivEmail" android:layout_centerVertical="true">
+                <TextView android:text="@string/sdk_uc_email_binded" style="@style/uc_reset_dialog_item_title_theme" />
+                <TextView android:id="@id/tvEmailSubTitle" android:layout_marginTop="4.0dip" android:text="@string/sdk_uc_reset_from_email" style="@style/uc_reset_dialog_item_text_theme" />
+            </LinearLayout>
+            <ImageView android:id="@id/ivEmailArror" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/uc_login_dialog_list_item_arrow_left" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <ImageView android:layout_gravity="center_horizontal" android:id="@id/ivClose" android:layout_width="@dimen/uc_reset_dialog_close_icon_size" android:layout_height="@dimen/uc_reset_dialog_close_icon_size" android:layout_marginTop="@dimen/uc_reset_dialog_close_icon_top_margin" android:src="@drawable/uc_reset_dialog_btn_close_normal" />
+</LinearLayout>

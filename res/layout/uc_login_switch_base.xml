@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/llEmailArea" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginBottom="@dimen/uc_login_email_bottom_margin" android:layout_weight="1.0">
+        <ViewStub android:id="@id/vsEmail" android:layout="@layout/uc_login_switch_email_check" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <ViewStub android:id="@id/vsPhone" android:layout="@layout/uc_login_switch_mobile_check" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <com.onemt.sdk.user.base.widget.CommonHorizontalDriverView android:id="@id/llThirdLabel" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.onemt.sdk.user.base.widget.ThirdPartyRecyclerView android:layout_gravity="center_horizontal" android:id="@id/rvThirdRecycler" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/uc_login_third_list_top_margin" />
+</LinearLayout>

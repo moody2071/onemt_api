@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:gravity="center_horizontal" android:layout_gravity="center" android:id="@id/rl_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_horizontal" android:layout_gravity="center" android:paddingLeft="@dimen/uc_security_pwd_verify_content_area_lr_margin" android:paddingRight="@dimen/uc_security_pwd_verify_content_area_lr_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/uc_common_tip_dialog_title_top_margin" android:layout_marginBottom="@dimen/uc_common_content_area_padding_bottom">
+        <TextView android:textSize="16.0sp" android:textColor="#ff333333" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/tvVerifyTitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sdk_verify_security_pwd_title" android:layout_alignParentTop="true" />
+        <TextView android:gravity="right" android:id="@id/tv_security_pwd_hint" android:layout_marginTop="@dimen/uc_verify_security_code_text_top_margin" android:layout_marginBottom="@dimen/uc_verify_security_code_text_bottom_margin" android:text="@string/sdk_verify_security_pwd_hint" android:layout_below="@id/tvVerifyTitle" style="@style/uc_login_dialog_text_security_pwd_hint_theme" />
+        <com.onemt.sdk.user.base.widget.EmailPasswordView android:id="@id/llSecurityPwd" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/tv_security_pwd_hint" />
+        <include android:id="@id/lrAction" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/llSecurityPwd" layout="@layout/uc_security_pwd_dialog_act_entry" />
+        <com.onemt.sdk.user.base.widget.SendButton android:id="@id/btnDone" android:layout_width="fill_parent" android:layout_marginTop="@dimen/uc_verify_security_code_done_button_top_margin" android:layout_below="@id/lrAction" android:layout_centerHorizontal="true" style="@style/uc_custom_state_button" />
+    </RelativeLayout>
+    <ImageView android:layout_gravity="left" android:id="@id/ivDialogClose" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/uc_dialog_close" />
+</FrameLayout>

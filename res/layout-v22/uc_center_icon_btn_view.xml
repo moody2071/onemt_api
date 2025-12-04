@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/ivIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/uc_login_dialog_btn_email_icon_label" />
+    <TextView android:textSize="@dimen/uc_third_party_vertical_list_item_text_size" android:textColor="@color/omt_sdk_black" android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/tvName" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/uc_button_center_icon_padding" android:maxLines="1" android:singleLine="true" android:useBoundsForWidth="true" android:shiftDrawingOffsetForStartOverhang="true" />
+</LinearLayout>

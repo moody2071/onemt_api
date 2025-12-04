@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/llThirdLogin" android:background="@drawable/uc_login_dialog_third_party_button_bg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/uc_common_button_height" android:layout_marginLeft="@dimen/uc_common_content_area_lr_margin" android:layout_marginTop="@dimen/uc_login_dialog_third_button_top_margin" android:layout_marginRight="@dimen/uc_common_content_area_lr_margin" android:layout_marginBottom="@dimen/uc_login_dialog_third_button_bottom_margin"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="right" android:id="@id/tvThirdLogin" android:useBoundsForWidth="true" android:shiftDrawingOffsetForStartOverhang="true" style="@style/uc_login_dialog_third_button_text" />
+    <ImageView android:id="@id/ivIcon" android:layout_width="@dimen/uc_login_dialog_third_button_icon_size" android:layout_height="@dimen/uc_login_dialog_third_button_icon_size" android:layout_marginLeft="@dimen/uc_login_dialog_third_icon_right_margin" android:src="@drawable/omt_sdk_uc_fb_icon" />
+</LinearLayout>

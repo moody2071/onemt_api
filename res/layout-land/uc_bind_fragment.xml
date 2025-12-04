@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/nvBind" android:focusable="true" android:focusableInTouchMode="true" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/llEmailArea" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/uc_bind_passport_area_top_margin">
+        <TextView android:textSize="@dimen/uc_bind_hint_text_size" android:textColor="@color/uc_bind_hint_label" android:id="@id/tvBindHint" android:layout_marginLeft="@dimen/uc_bind_common_horizontal_margin" android:layout_marginTop="@dimen/uc_bind_hint_top_margin" android:layout_marginRight="@dimen/uc_bind_common_horizontal_margin" android:text="@string/sdk_uc_status_unbound_tooltip" style="@style/uc_common_content_hint_theme" />
+        <View android:id="@id/gap" android:layout_width="fill_parent" android:layout_height="@dimen/uc_bind_email_top_margin" />
+        <com.onemt.sdk.user.base.widget.EmailAccountStatusView android:id="@id/llAccountStatus" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/uc_common_button_height" android:layout_marginLeft="@dimen/uc_bind_common_horizontal_margin" android:layout_marginRight="@dimen/uc_bind_common_horizontal_margin" />
+        <LinearLayout android:gravity="center" android:id="@id/llPassportBind" android:background="@color/uc_account_unbind_btn_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/uc_account_unbind_btn_height" android:layout_marginLeft="@dimen/uc_main_bind_button_margin" android:layout_marginRight="@dimen/uc_main_bind_button_margin">
+            <TextView android:gravity="center" android:id="@id/btnEmail" android:layout_marginBottom="@dimen/uc_account_unbind_btn_shadowy" style="@style/uc_bind_account_btn_theme" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/llThird" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/uc_bind_other_label_top_margin">
+        <com.onemt.sdk.user.base.widget.CommonHorizontalDriverView android:id="@id/llThirdLabel" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/uc_bind_common_horizontal_margin" android:layout_marginRight="@dimen/uc_bind_common_horizontal_margin" android:layout_marginBottom="@dimen/uc_bind_other_label_bottom_margin" />
+        <com.onemt.sdk.user.base.widget.ThirdPartyRecyclerView android:layout_gravity="center_horizontal" android:id="@id/rvThird" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/uc_common_content_area_padding_bottom" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    </LinearLayout>
+</LinearLayout>

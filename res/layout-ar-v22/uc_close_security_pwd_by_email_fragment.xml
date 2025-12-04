@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/llRoot" android:paddingLeft="@dimen/uc_common_content_area_lr_margin" android:paddingRight="@dimen/uc_common_content_area_lr_margin" android:paddingBottom="@dimen/uc_common_content_area_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="right" android:id="@id/tvContentTitle" android:useBoundsForWidth="true" android:shiftDrawingOffsetForStartOverhang="true" style="@style/uc_common_content_title_theme" />
+    <TextView android:gravity="right" android:id="@id/tvCloseSecurityPwdHint" android:visibility="gone" android:text="@string/sdk_close_security_pwd_by_email_hint" android:useBoundsForWidth="true" android:shiftDrawingOffsetForStartOverhang="true" style="@style/uc_common_content_hint_theme" />
+    <com.onemt.sdk.user.base.widget.EmailInputView android:id="@id/llEmail" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/uc_login_dialog_content_tiphint_margin_bottom" />
+    <com.onemt.sdk.user.base.widget.EmailVerifyCodeView android:id="@id/llEmailVerifyCode" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/uc_login_dialog_input_box_bottom_margin" />
+    <com.onemt.sdk.user.base.widget.SendButton android:id="@id/btnConfirm" android:layout_centerHorizontal="true" style="@style/uc_custom_state_button" />
+</LinearLayout>

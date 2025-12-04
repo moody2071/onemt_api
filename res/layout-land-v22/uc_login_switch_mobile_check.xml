@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:id="@id/llPrivacy" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/uc_done_button_top_margin" custom:layout_constraintLeft_toLeftOf="parent" custom:layout_constraintRight_toRightOf="parent" custom:layout_constraintTop_toTopOf="parent">
+        <com.onemt.sdk.user.base.widget.PrivacyAgreementAcceptView android:id="@id/loginPrivacyTerms" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/uc_login_privacy_terms_bottom_margin" />
+    </LinearLayout>
+    <com.onemt.sdk.user.base.widget.SendButton android:id="@id/btnNext" android:layout_marginTop="0.0dip" custom:buttonText="@string/sdk_uc_btn_next" custom:layout_constraintLeft_toLeftOf="parent" custom:layout_constraintRight_toRightOf="parent" custom:layout_constraintTop_toBottomOf="@id/llPrivacy" style="@style/uc_custom_state_button" />
+    <TextView android:id="@id/tvLoginForEmail" android:text="@string/sdk_uc_btn_email_login" android:useBoundsForWidth="true" android:shiftDrawingOffsetForStartOverhang="true" custom:layout_constraintRight_toRightOf="parent" custom:layout_constraintTop_toTopOf="parent" style="@style/uc_login_dialog_link_btn_theme" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:paddingLeft="32.0dip" android:paddingRight="32.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingHorizontal="32.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:id="@id/datePickerLl" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.onemt.sdk.user.base.widget.datepicker.RecyclerWheelPicker android:id="@id/datePickerYearPv" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" custom:decorationColor="#ffe6e6e6" custom:textColor="#ff333333" custom:textSize="16.0sp" />
+        <com.onemt.sdk.user.base.widget.datepicker.RecyclerWheelPicker android:id="@id/datePickerMonthPv" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" custom:decorationColor="#ffe6e6e6" custom:textColor="#ff333333" custom:textSize="16.0sp" />
+        <com.onemt.sdk.user.base.widget.datepicker.RecyclerWheelPicker android:id="@id/datePickerDayPv" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" custom:decorationColor="#ffe6e6e6" custom:textColor="#ff333333" custom:textSize="16.0sp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

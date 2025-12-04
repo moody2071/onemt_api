@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="right" android:id="@id/tvEmailHint" android:text="@string/sdk_uc_bind_email_input_hint" style="@style/uc_login_dialog_text_security_pwd_hint_theme" />
+    <RelativeLayout android:id="@id/rlEmail" style="@style/uc_login_dialog_input_box_theme">
+        <ImageView android:id="@id/pwd_img" android:src="@drawable/uc_login_dialog_input_name_label" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/uc_login_dialog_input_email_label_icon_theme" />
+        <LinearLayout android:focusable="true" android:focusableInTouchMode="true" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <requestFocus />
+        </LinearLayout>
+        <EditText android:gravity="center|right" android:id="@id/etEmail" android:hint="@string/sdk_uc_email_inputbox" android:layout_toLeftOf="@id/pwd_img" android:layout_toRightOf="@id/ivDelEmail" android:inputType="textEmailAddress" style="@style/uc_login_dialog_input_et_theme" />
+        <ImageView android:id="@id/ivDelEmail" android:visibility="gone" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/uc_login_dialog_clean_icon_theme" />
+    </RelativeLayout>
+    <com.onemt.sdk.user.base.widget.SendButton android:id="@id/btnConfirm" android:layout_centerHorizontal="true" style="@style/uc_custom_state_button" />
+</LinearLayout>

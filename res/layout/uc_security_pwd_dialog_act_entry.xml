@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/tvResetSecurityPwd" android:paddingTop="@dimen/uc_login_dialog_link_button_small_padding" android:text="@string/sdk_uc_linkbtn_forgotSecurity" android:layout_alignParentLeft="true" style="@style/uc_login_dialog_link_btn_theme" />
+    <TextView android:id="@id/tvCloseSecurityPwd" android:paddingTop="@dimen/uc_login_dialog_link_button_small_padding" android:text="@string/sdk_uc_linkbtn_closeSecurity" android:layout_alignParentRight="true" style="@style/uc_login_dialog_link_btn_theme" />
+</RelativeLayout>

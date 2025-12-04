@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/llSwitchAccountArea" android:paddingLeft="@dimen/uc_common_content_area_lr_margin" android:paddingRight="@dimen/uc_common_content_area_lr_margin" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <TextView android:layout_gravity="left" android:id="@id/tvContentTitle" style="@style/uc_common_content_title_theme" />
+    <TextView android:id="@id/tvCommonHint" android:layout_marginBottom="@dimen/uc_login_dialog_content_tiphint_margin_bottom" android:text="@string/sdk_uc_switchaccount_title" style="@style/uc_common_content_hint_theme" />
+    <FrameLayout android:id="@id/flContainer" android:focusable="true" android:focusableInTouchMode="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginBottom="@dimen/uc_login_third_list_bottom_margin" android:layout_weight="1.0" />
+    <LinearLayout android:orientation="vertical" android:id="@id/llThirdLogin" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <androidx.recyclerview.widget.RecyclerView android:layout_gravity="center_horizontal" android:id="@id/rvThirdNoEmail" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginBottom="@dimen/uc_login_third_list_bottom_margin" android:layout_weight="1.0" />
+        <LinearLayout android:gravity="center_horizontal" android:id="@id/llPrivacyTerms" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.onemt.sdk.user.base.widget.PrivacyAgreementAcceptView android:gravity="center_horizontal" android:id="@id/thirdLoginPrivacyTerms" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

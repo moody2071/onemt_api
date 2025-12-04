@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/container" android:paddingLeft="20.0dip" android:paddingTop="10.0dip" android:paddingRight="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="20.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:scrollbarThumbVertical="@color/scrollerBg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:verticalScrollbarPosition="left">
+        <LinearLayout android:orientation="vertical" android:id="@id/consentContentLl" android:paddingLeft="5.5dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.onemt.sdk.cmp.onemt.view.CusFontTextView android:gravity="right" android:layout_gravity="right" android:id="@id/cmpConfirmContentTx" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sdk_cmp_statement_confirm" app:cusFontStyle="primaryContent" />
+            <com.onemt.sdk.cmp.onemt.view.CusFontTextView android:layout_gravity="right" android:id="@id/agreementTx" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/sdk_cmp_info_user_agreement" app:cusFontStyle="hyperlink" />
+            <com.onemt.sdk.cmp.onemt.view.CusFontTextView android:layout_gravity="right" android:id="@id/privacyTx" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/sdk_cmp_info_privacy_policy" app:cusFontStyle="hyperlink" />
+            <LinearLayout android:orientation="vertical" android:id="@id/consentCmpLl" android:paddingBottom="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.onemt.sdk.cmp.onemt.view.CusFontTextView android:gravity="right" android:id="@id/cmpCollectContentTx" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/sdk_cmp_statement_auth_collect_android" app:cusFontStyle="content" />
+                <com.onemt.sdk.cmp.onemt.view.CusFontTextView android:gravity="right" android:id="@id/cmpSettingTx" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/sdk_cmp_statement_custom_settings" app:cusFontStyle="content" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

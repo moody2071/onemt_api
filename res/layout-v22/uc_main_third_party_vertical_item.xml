@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/uc_bind_button_bg_selector" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/uc_third_party_vertical_list_item_horizontal_padding" android:paddingRight="@dimen/uc_third_party_vertical_list_item_horizontal_padding" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="@dimen/uc_third_list_item_height">
+        <ImageView android:id="@id/ivIcon" android:layout_width="@dimen/uc_third_party_vertical_list_item_icon_size" android:layout_height="@dimen/uc_third_party_vertical_list_item_icon_size" android:layout_marginRight="@dimen/uc_third_party_vertical_list_item_icon_margin_end" android:src="@drawable/omt_sdk_uc_fb_icon" />
+        <TextView android:textSize="@dimen/uc_third_party_vertical_list_item_text_size" android:textColor="@color/uc_bind_thirdparty_vertical_list_item_text_selector" android:ellipsize="end" android:id="@id/tvName" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" android:useBoundsForWidth="true" android:shiftDrawingOffsetForStartOverhang="true" />
+    </LinearLayout>
+</LinearLayout>
