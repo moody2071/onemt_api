@@ -1,0 +1,378 @@
+.class public final Landroidx/lifecycle/PausingDispatcherKt;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# direct methods
+.method public static final a(Landroidx/lifecycle/Lifecycle;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 1
+    .param p0    # Landroidx/lifecycle/Lifecycle;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p1    # Lkotlin/jvm/functions/Function2;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p2    # Lkotlin/coroutines/Continuation;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Landroidx/lifecycle/Lifecycle;",
+            "Lkotlin/jvm/functions/Function2<",
+            "-",
+            "Lkotlinx/coroutines/CoroutineScope;",
+            "-",
+            "Lkotlin/coroutines/Continuation<",
+            "-TT;>;+",
+            "Ljava/lang/Object;",
+            ">;",
+            "Lkotlin/coroutines/Continuation<",
+            "-TT;>;)",
+            "Ljava/lang/Object;"
+        }
+    .end annotation
+
+    .annotation runtime Lkotlin/Deprecated;
+        message = "whenCreated has been deprecated because it runs the block on a pausing dispatcher that suspends, rather than cancels work when the lifecycle state goes below the given state. Use withCreated for non-suspending work that needs to run only once when the Lifecycle changes."
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+
+    sget-object v0, Landroidx/lifecycle/Lifecycle$State;->CREATED:Landroidx/lifecycle/Lifecycle$State;
+
+    invoke-static {p0, v0, p1, p2}, Landroidx/lifecycle/PausingDispatcherKt;->g(Landroidx/lifecycle/Lifecycle;Landroidx/lifecycle/Lifecycle$State;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static final b(Landroidx/lifecycle/LifecycleOwner;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 0
+    .param p0    # Landroidx/lifecycle/LifecycleOwner;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p1    # Lkotlin/jvm/functions/Function2;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p2    # Lkotlin/coroutines/Continuation;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Landroidx/lifecycle/LifecycleOwner;",
+            "Lkotlin/jvm/functions/Function2<",
+            "-",
+            "Lkotlinx/coroutines/CoroutineScope;",
+            "-",
+            "Lkotlin/coroutines/Continuation<",
+            "-TT;>;+",
+            "Ljava/lang/Object;",
+            ">;",
+            "Lkotlin/coroutines/Continuation<",
+            "-TT;>;)",
+            "Ljava/lang/Object;"
+        }
+    .end annotation
+
+    .annotation runtime Lkotlin/Deprecated;
+        message = "whenCreated has been deprecated because it runs the block on a pausing dispatcher that suspends, rather than cancels work when the lifecycle state goes below the given state. Use withCreated for non-suspending work that needs to run only once when the Lifecycle changes."
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+
+    invoke-interface {p0}, Landroidx/lifecycle/LifecycleOwner;->getLifecycle()Landroidx/lifecycle/Lifecycle;
+
+    move-result-object p0
+
+    invoke-static {p0, p1, p2}, Landroidx/lifecycle/PausingDispatcherKt;->a(Landroidx/lifecycle/Lifecycle;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static final c(Landroidx/lifecycle/Lifecycle;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 1
+    .param p0    # Landroidx/lifecycle/Lifecycle;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p1    # Lkotlin/jvm/functions/Function2;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p2    # Lkotlin/coroutines/Continuation;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Landroidx/lifecycle/Lifecycle;",
+            "Lkotlin/jvm/functions/Function2<",
+            "-",
+            "Lkotlinx/coroutines/CoroutineScope;",
+            "-",
+            "Lkotlin/coroutines/Continuation<",
+            "-TT;>;+",
+            "Ljava/lang/Object;",
+            ">;",
+            "Lkotlin/coroutines/Continuation<",
+            "-TT;>;)",
+            "Ljava/lang/Object;"
+        }
+    .end annotation
+
+    .annotation runtime Lkotlin/Deprecated;
+        message = "whenResumed has been deprecated because it runs the block on a pausing dispatcher that suspends, rather than cancels work when the lifecycle state goes below the given state. Use withResumed for non-suspending work that needs to run only once when the Lifecycle changes."
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+
+    sget-object v0, Landroidx/lifecycle/Lifecycle$State;->RESUMED:Landroidx/lifecycle/Lifecycle$State;
+
+    invoke-static {p0, v0, p1, p2}, Landroidx/lifecycle/PausingDispatcherKt;->g(Landroidx/lifecycle/Lifecycle;Landroidx/lifecycle/Lifecycle$State;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static final d(Landroidx/lifecycle/LifecycleOwner;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 0
+    .param p0    # Landroidx/lifecycle/LifecycleOwner;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p1    # Lkotlin/jvm/functions/Function2;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p2    # Lkotlin/coroutines/Continuation;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Landroidx/lifecycle/LifecycleOwner;",
+            "Lkotlin/jvm/functions/Function2<",
+            "-",
+            "Lkotlinx/coroutines/CoroutineScope;",
+            "-",
+            "Lkotlin/coroutines/Continuation<",
+            "-TT;>;+",
+            "Ljava/lang/Object;",
+            ">;",
+            "Lkotlin/coroutines/Continuation<",
+            "-TT;>;)",
+            "Ljava/lang/Object;"
+        }
+    .end annotation
+
+    .annotation runtime Lkotlin/Deprecated;
+        message = "whenResumed has been deprecated because it runs the block on a pausing dispatcher that suspends, rather than cancels work when the lifecycle state goes below the given state. Use withResumed for non-suspending work that needs to run only once when the Lifecycle changes."
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+
+    invoke-interface {p0}, Landroidx/lifecycle/LifecycleOwner;->getLifecycle()Landroidx/lifecycle/Lifecycle;
+
+    move-result-object p0
+
+    invoke-static {p0, p1, p2}, Landroidx/lifecycle/PausingDispatcherKt;->c(Landroidx/lifecycle/Lifecycle;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static final e(Landroidx/lifecycle/Lifecycle;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 1
+    .param p0    # Landroidx/lifecycle/Lifecycle;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p1    # Lkotlin/jvm/functions/Function2;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p2    # Lkotlin/coroutines/Continuation;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Landroidx/lifecycle/Lifecycle;",
+            "Lkotlin/jvm/functions/Function2<",
+            "-",
+            "Lkotlinx/coroutines/CoroutineScope;",
+            "-",
+            "Lkotlin/coroutines/Continuation<",
+            "-TT;>;+",
+            "Ljava/lang/Object;",
+            ">;",
+            "Lkotlin/coroutines/Continuation<",
+            "-TT;>;)",
+            "Ljava/lang/Object;"
+        }
+    .end annotation
+
+    .annotation runtime Lkotlin/Deprecated;
+        message = "whenStarted has been deprecated because it runs the block on a pausing dispatcher that suspends, rather than cancels work when the lifecycle state goes below the given state. Use withStarted for non-suspending work that needs to run only once when the Lifecycle changes."
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+
+    sget-object v0, Landroidx/lifecycle/Lifecycle$State;->STARTED:Landroidx/lifecycle/Lifecycle$State;
+
+    invoke-static {p0, v0, p1, p2}, Landroidx/lifecycle/PausingDispatcherKt;->g(Landroidx/lifecycle/Lifecycle;Landroidx/lifecycle/Lifecycle$State;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static final f(Landroidx/lifecycle/LifecycleOwner;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 0
+    .param p0    # Landroidx/lifecycle/LifecycleOwner;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p1    # Lkotlin/jvm/functions/Function2;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p2    # Lkotlin/coroutines/Continuation;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Landroidx/lifecycle/LifecycleOwner;",
+            "Lkotlin/jvm/functions/Function2<",
+            "-",
+            "Lkotlinx/coroutines/CoroutineScope;",
+            "-",
+            "Lkotlin/coroutines/Continuation<",
+            "-TT;>;+",
+            "Ljava/lang/Object;",
+            ">;",
+            "Lkotlin/coroutines/Continuation<",
+            "-TT;>;)",
+            "Ljava/lang/Object;"
+        }
+    .end annotation
+
+    .annotation runtime Lkotlin/Deprecated;
+        message = "whenStarted has been deprecated because it runs the block on a pausing dispatcher that suspends, rather than cancels work when the lifecycle state goes below the given state. Use withStarted for non-suspending work that needs to run only once when the Lifecycle changes."
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+
+    invoke-interface {p0}, Landroidx/lifecycle/LifecycleOwner;->getLifecycle()Landroidx/lifecycle/Lifecycle;
+
+    move-result-object p0
+
+    invoke-static {p0, p1, p2}, Landroidx/lifecycle/PausingDispatcherKt;->e(Landroidx/lifecycle/Lifecycle;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static final g(Landroidx/lifecycle/Lifecycle;Landroidx/lifecycle/Lifecycle$State;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 3
+    .param p0    # Landroidx/lifecycle/Lifecycle;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p1    # Landroidx/lifecycle/Lifecycle$State;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p2    # Lkotlin/jvm/functions/Function2;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p3    # Lkotlin/coroutines/Continuation;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Landroidx/lifecycle/Lifecycle;",
+            "Landroidx/lifecycle/Lifecycle$State;",
+            "Lkotlin/jvm/functions/Function2<",
+            "-",
+            "Lkotlinx/coroutines/CoroutineScope;",
+            "-",
+            "Lkotlin/coroutines/Continuation<",
+            "-TT;>;+",
+            "Ljava/lang/Object;",
+            ">;",
+            "Lkotlin/coroutines/Continuation<",
+            "-TT;>;)",
+            "Ljava/lang/Object;"
+        }
+    .end annotation
+
+    .annotation runtime Lkotlin/Deprecated;
+        message = "whenStateAtLeast has been deprecated because it runs the block on a pausing dispatcher that suspends, rather than cancels work when the lifecycle state goes below the given state. Use withStateAtLeast for non-suspending work that needs to run only once when the Lifecycle changes."
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+
+    invoke-static {}, Lcom/onemt/sdk/launch/base/g90;->e()Lkotlinx/coroutines/MainCoroutineDispatcher;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lkotlinx/coroutines/MainCoroutineDispatcher;->getImmediate()Lkotlinx/coroutines/MainCoroutineDispatcher;
+
+    move-result-object v0
+
+    new-instance v1, Landroidx/lifecycle/PausingDispatcherKt$whenStateAtLeast$2;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, p0, p1, p2, v2}, Landroidx/lifecycle/PausingDispatcherKt$whenStateAtLeast$2;-><init>(Landroidx/lifecycle/Lifecycle;Landroidx/lifecycle/Lifecycle$State;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {v0, v1, p3}, Lcom/onemt/sdk/launch/base/vm;->h(Lkotlin/coroutines/CoroutineContext;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method

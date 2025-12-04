@@ -1,0 +1,104 @@
+.class final Lcom/onemt/sdk/cmp/onemt/dialog/ConsentDialog$doBusiness$1$1;
+.super Lkotlin/jvm/internal/Lambda;
+.source "SourceFile"
+
+# interfaces
+.implements Lkotlin/jvm/functions/Function0;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/onemt/sdk/cmp/onemt/dialog/ConsentDialog;->doBusiness()V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lkotlin/jvm/internal/Lambda;",
+        "Lkotlin/jvm/functions/Function0<",
+        "Lcom/onemt/sdk/launch/base/v13;",
+        ">;"
+    }
+.end annotation
+
+
+# instance fields
+.field public final synthetic this$0:Lcom/onemt/sdk/cmp/onemt/dialog/ConsentDialog;
+
+
+# direct methods
+.method public constructor <init>(Lcom/onemt/sdk/cmp/onemt/dialog/ConsentDialog;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/onemt/sdk/cmp/onemt/dialog/ConsentDialog$doBusiness$1$1;->this$0:Lcom/onemt/sdk/cmp/onemt/dialog/ConsentDialog;
+
+    const/4 p1, 0x0
+
+    invoke-direct {p0, p1}, Lkotlin/jvm/internal/Lambda;-><init>(I)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public bridge synthetic invoke()Ljava/lang/Object;
+    .locals 1
+
+    .line 1
+    invoke-virtual {p0}, Lcom/onemt/sdk/cmp/onemt/dialog/ConsentDialog$doBusiness$1$1;->invoke()V
+
+    sget-object v0, Lcom/onemt/sdk/launch/base/v13;->a:Lcom/onemt/sdk/launch/base/v13;
+
+    return-object v0
+.end method
+
+.method public final invoke()V
+    .locals 5
+
+    .line 2
+    sget-object v0, Lcom/onemt/sdk/cmp/onemt/Report;->INSTANCE:Lcom/onemt/sdk/cmp/onemt/Report;
+
+    iget-object v1, p0, Lcom/onemt/sdk/cmp/onemt/dialog/ConsentDialog$doBusiness$1$1;->this$0:Lcom/onemt/sdk/cmp/onemt/dialog/ConsentDialog;
+
+    invoke-virtual {v1}, Lcom/onemt/sdk/cmp/onemt/dialog/BaseConsentDialog;->getOptTime()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "customsettings"
+
+    invoke-virtual {v0, v1, v2}, Lcom/onemt/sdk/cmp/onemt/Report;->reportCmp(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 3
+    sget-object v0, Lcom/onemt/sdk/cmp/onemt/dialog/BaseConsentDialog;->Companion:Lcom/onemt/sdk/cmp/onemt/dialog/BaseConsentDialog$Companion;
+
+    new-instance v1, Lcom/onemt/sdk/cmp/onemt/dialog/ConsentManagerDialog;
+
+    invoke-direct {v1}, Lcom/onemt/sdk/cmp/onemt/dialog/ConsentManagerDialog;-><init>()V
+
+    new-instance v2, Landroid/os/Bundle;
+
+    invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
+
+    iget-object v3, p0, Lcom/onemt/sdk/cmp/onemt/dialog/ConsentDialog$doBusiness$1$1;->this$0:Lcom/onemt/sdk/cmp/onemt/dialog/ConsentDialog;
+
+    .line 4
+    invoke-virtual {v3}, Lcom/onemt/sdk/cmp/onemt/dialog/BaseConsentDialog;->isForce()Z
+
+    move-result v3
+
+    const-string v4, "CMP_DIALOG_IS_FORCE"
+
+    invoke-virtual {v2, v4, v3}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
+
+    .line 5
+    sget-object v3, Lcom/onemt/sdk/launch/base/v13;->a:Lcom/onemt/sdk/launch/base/v13;
+
+    .line 6
+    invoke-virtual {v0, v1, v2}, Lcom/onemt/sdk/cmp/onemt/dialog/BaseConsentDialog$Companion;->show(Lcom/onemt/sdk/cmp/onemt/dialog/BaseConsentDialog;Landroid/os/Bundle;)V
+
+    return-void
+.end method
