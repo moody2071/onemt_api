@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["i18n/sdk-langs-ar-json"],{"52d4":function(n){n.exports=JSON.parse('{"复制成功":"تم النسخ","账号处理结果":"نتيجة الحساب"}')}}]);

@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["i18n/sdk-langs-vi-json"],{da4a:function(n){n.exports=JSON.parse('{"复制成功":"Đã sao chép","账号处理结果":"Kết quả tài khoản"}')}}]);

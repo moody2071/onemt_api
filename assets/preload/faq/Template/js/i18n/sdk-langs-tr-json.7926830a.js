@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["i18n/sdk-langs-tr-json"],{2865:function(n){n.exports=JSON.parse('{"复制成功":"Kopyalandı","账号处理结果":"Hesap sonucu"}')}}]);

@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["i18n/sdk-langs-ja-json"],{f5da:function(n){n.exports=JSON.parse('{"复制成功":"コピーしました","账号处理结果":"アカウント処理結果"}')}}]);

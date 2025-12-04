@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["i18n/sdk-langs-fr-json"],{"1afc":function(n){n.exports=JSON.parse('{"复制成功":"Copié","账号处理结果":"Résultat du compte"}')}}]);

@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["i18n/web-langs-fa-json"],{"379f":function(n){n.exports=JSON.parse('{"关闭":"ببند","确定":"تایید","提示":"راهنمایی ها"}')}}]);

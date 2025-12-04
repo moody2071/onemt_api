@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["i18n/sdk-langs-ko-json"],{"00d0":function(n){n.exports=JSON.parse('{"复制成功":"복사 완료","账号处理结果":"계정 처리 결과"}')}}]);

@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["i18n/sdk-langs-ru-json"],{f9eb:function(n){n.exports=JSON.parse('{"复制成功":"Скопировано","账号处理结果":"Результат аккаунта"}')}}]);

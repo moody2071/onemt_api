@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["i18n/sdk-langs-nl-json"],{"3f64":function(n){n.exports=JSON.parse('{"复制成功":"Gekopieerd","账号处理结果":"Accountresultaat"}')}}]);

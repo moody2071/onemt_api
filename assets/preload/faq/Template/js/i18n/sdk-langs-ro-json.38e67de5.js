@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["i18n/sdk-langs-ro-json"],{b02f:function(n){n.exports=JSON.parse('{"复制成功":"Copiat","账号处理结果":"Rezultat cont"}')}}]);

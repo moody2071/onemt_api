@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta onemt-sdk-field="with-header" onemt-sdk-varue="false">
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="dns-prefetch" href="https://gameapi.onemt.co">
+  <meta charset="utf-8">
+  <!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />-->
+  <!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
+  <!--ie渲染引擎-->
+  <!--忽略电话号码和email识别-->
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="email=no">
+  <!--当网站添加到主屏幕快速启动方式，将网站添加到主屏幕快速启动方式-->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <!--隐藏ios上的浏览器地址栏-->
+  <!--<meta name="apple-mobile-web-app-status-bar-style" content="black" />-->
+  <!-- UC默认竖屏 ，UC强制全屏 -->
+  <meta name="full-screen" content="yes">
+  <meta name="browsermode" content="application">
+  <!-- QQ强制竖屏 QQ强制全屏 -->
+  <meta name="x5-orientation" content="portrait">
+  <meta name="x5-fullscreen" content="true">
+  <meta name="x5-page-mode" content="app">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+  <link rel="icon" href="data:;base64,=">
+  <!--<link rel="icon" href="favicon.ico">-->
+  <title>community-v2</title>
+  <script async>
+    window.web_startTime = new Date().getTime()
+    // var xhr = new XMLHttpRequest()
+    // xhr.open('get', 'https://gameapi.onemt.co', true)
+    // xhr.send(null)
+    /*var xhr2 = new XMLHttpRequest()
+    xhr2.open('get', 'http://gameapi.myeof.com', true)
+    xhr2.send(null)*/
+    window.onloadTime = (new Date).getTime()
+    window.SDK_HTTPS_SCHEME = 'https'
+    window.SDK_HTTP_SCHEME = 'http'
+
+    // Load the IFrame Player API code asynchronously.
+    /* var tag = document.createElement('script');
+     tag.src = "https://www.youtube.com/player_api";
+     var firstScriptTag = document.getElementsByTagName('script')[0];
+     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);*/
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123523515-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-123523515-1');
+      
+    </script> -->
+
+  <style>
+    [v-cloak] {
+      display: block;
+    }
+    :root {
+      --titleHeight:50px;
+      --size-fix-hair-lr:0px;
+      --footer-padding:0px;
+    }
+
+    html {
+      height: 100%;
+      --bg-color1:#111116;
+      --bg-color2:#242229;
+      --bg-color3:#2B2B30;
+      --bg-color4:#2A292E;
+      --bg-color5:#242329;
+      --bg-color6:linear-gradient(270deg, rgba(255, 255, 255, 0.00) 0.33%, rgba(255, 255, 255, 0.10) 49.95%, rgba(255, 255, 255, 0.00) 99.57%);
+      background: var(--bg-color1);
+    }
+    html[data-theme="white"] {
+      --bg-color1:#fff;
+      --bg-color2:#ddd;
+      --bg-color3:#eae8e8;
+      --bg-color4:#ddd;
+      --bg-color5:#d0d0d0;
+      --bg-color6:linear-gradient(270deg, rgba(0, 0, 0, 0.00) 0.33%, rgba(0, 0, 0, 0.30) 49.95%, rgba(0, 0, 0, 0.00) 99.57%);
+      background: var(--bg-color1);
+    }
+
+    [data-landscope] body {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: var(--size-fix-hair-lr);
+    padding-right: var(--size-fix-hair-lr);
+    }
+    body {
+      height: 100%;
+      margin: 0;
+      /* padding-top: 22px; */
+      box-sizing: border-box;
+    }
+    #app {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    .skeleton-top {
+      width: 100%;
+      flex-shrink: 0;
+      display: flex;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: 10px 15px;
+      left: 0;
+      box-sizing: border-box;
+      background: var(--bg-color1);;
+
+    }
+
+    .g-content {
+      height: vh;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .g-content .block-1 {
+      height: 46px;
+      background: var(--bg-color2);
+      display: flex;
+      align-items: center;
+    }
+
+    .g-content .block-1 .block {
+      width: 122px;
+      height: 26px;
+      flex-shrink: 0;
+      border-radius: 13px;
+      background: var(--bg-color3);
+      margin: 0 10px;
+
+    }
+
+    .g-content .block-2 {
+      width: 100%;
+    }
+
+    .g-content .block-2 .banner {
+      width: 90%;
+      height: 175px;
+      border-radius: 8px;
+      margin: 10px auto;
+      background: var(--bg-color4);
+    }
+
+    .g-content .block-2 .dots {
+      width: 104px;
+      height: 8px;
+      border-radius: 8px;
+      background: var(--bg-color4);
+      margin: 10px auto;
+    }
+
+    .skeleton-bottom {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px;
+      background: var(--bg-color1);
+      box-sizing: border-box;
+      z-index: 10;
+    }
+
+    .zfz {
+      width: 30px;
+      height: 30px;
+      flex-shrink: 0;
+    }
+
+    .g-block {
+      border-radius: 6px;
+      background:  var(--bg-color3);;
+    }
+
+    .list-item {
+      padding: 10px;
+      flex-shrink: 0;
+      display: flex;
+      background: var(--bg-color5);
+      margin-top: 5px;
+      position: relative;
+      box-sizing: border-box;
+    }
+
+    .list-item .left {
+      flex: 1;
+
+    }
+
+    .list-item .left .t1 {
+      width: 90%;
+      height: 20px;
+      border-radius: 10px;
+      background:  var(--bg-color3);;
+    }
+
+    .list-item .left .t2 {
+      width: 90%;
+      display: flex;
+      justify-content: flex-start;
+      margin-top: 30px;
+    }
+
+    .list-item .left .t2 .p {
+      width: 58px;
+      height: 16px;
+      border-radius: 10px;
+      background:  var(--bg-color3);;
+      margin-right: 10px;
+    }
+
+    .list-item .img {
+      width: 116px;
+      height: 78px;
+      flex-shrink: 0;
+      border-radius: 6px;
+      background:  var(--bg-color3);;
+    }
+
+    .skeleton {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      box-sizing: border-box;
+    }
+    .skeleton-info{
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    .landscape .skeleton-bottom {
+      width: 60px;
+      height: calc(100vh - 50px);
+      bottom: 0;
+      flex-direction: column;
+      align-items: center;
+
+    }
+    .landscape-ar .skeleton-bottom {
+      left: unset;
+      right: 0px;
+    }
+    .landscape .block-2 {
+      display: none;
+    }
+    .landscape .g-content {
+      overflow: hidden;
+      left: 60px;
+      position: absolute;
+      width: calc(100% - 60px);
+    }
+    .landscape-ar .g-content {
+      left: 0px;
+    }
+    .landscape .block-3 {
+     display: flex;
+     flex-wrap: wrap;
+
+    }
+    .landscape .block-3 .list-item{
+      width: 50%;
+    }
+
+    @keyframes flush {
+      0% {
+        left: -100%
+      }
+
+      50% {
+        left: 0
+      }
+
+      100% {
+        left: 100%
+      }
+    }
+   
+    .skeleton-animte {
+      animation: flush 1.5s linear infinite;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      z-index: 1000;
+      opacity: 0.2;
+    }
+    .landscape  .skeleton-animte {
+      animation: flush 1.8s linear infinite;
+    }
+    .skeleton-animte .a1{
+      width: 50%;
+      height: 100%;
+      position: absolute;
+      left: -18%;
+      background:  var(--bg-color6);
+    }
+    .skeleton-animte .a2{
+      width: 50%;
+      height: 100%;
+      right: 0%;
+      position: absolute;
+      background: var(--bg-color6);
+    }
+    .m-view{
+      /* opacity: 0; */
+    }
+  </style>
+
+<link href="css/chunk-5c3a123a.b237ab95.css" rel="prefetch"><link href="js/chunk-5c3a123a.960b5e7b.js" rel="prefetch"><link href="css/app.f81d929a.css" rel="preload" as="style"><link href="css/chunk-vendors.c412edf5.css" rel="preload" as="style"><link href="js/app.27a13e3f.js" rel="preload" as="script"><link href="js/chunk-vendors.814154f2.js" rel="preload" as="script"></head>
+
+
+
+<body>
+  <noscript>
+    <strong>We're sorry but community-v2 doesn't work properly without JavaScript enabled. Please enable it to
+      continue.</strong>
+  </noscript>
+  <div id="app" v-cloak>
+    <div class="skeleton">
+      <div class="skeleton-info">
+        <div class="skeleton-animte">
+          <div class="a1"></div>
+          <div class="a2"></div>
+        </div>
+        <div class="skeleton-top">
+          <div class="zfz g-block" style="opacity: 0;"></div>
+          <div class="zfz g-block" style="opacity: 0;"></div>
+        </div>
+        <div class="g-content">
+          <div class="block-1">
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+          </div>
+          <div class="block-2">
+            <div class="banner"></div>
+            <div class="dots"></div>
+          </div>
+          <div class="block-3">
+            <div class="list-item">
+              <div class="left">
+                <div class="t1"></div>
+                <div class="t2">
+                  <div class="p"></div>
+                  <div class="p"></div>
+                </div>
+              </div>
+              <div class="img"></div>
+            </div>
+            <div class="list-item">
+              <div class="left">
+                <div class="t1"></div>
+                <div class="t2">
+                  <div class="p"></div>
+                  <div class="p"></div>
+                </div>
+              </div>
+              <div class="img"></div>
+            </div>
+            <div class="list-item">
+              <div class="left">
+                <div class="t1"></div>
+                <div class="t2">
+                  <div class="p"></div>
+                  <div class="p"></div>
+                </div>
+              </div>
+              <div class="img"></div>
+            </div>
+            <div class="list-item">
+              <div class="left">
+                <div class="t1"></div>
+                <div class="t2">
+                  <div class="p"></div>
+                  <div class="p"></div>
+                </div>
+              </div>
+              <div class="img"></div>
+            </div>
+            <div class="list-item">
+              <div class="left">
+                <div class="t1"></div>
+                <div class="t2">
+                  <div class="p"></div>
+                  <div class="p"></div>
+                </div>
+              </div>
+              <div class="img"></div>
+            </div>
+            <div class="list-item">
+              <div class="left">
+                <div class="t1"></div>
+                <div class="t2">
+                  <div class="p"></div>
+                  <div class="p"></div>
+                </div>
+              </div>
+              <div class="img"></div>
+            </div>
+            <div class="list-item">
+              <div class="left">
+                <div class="t1"></div>
+                <div class="t2">
+                  <div class="p"></div>
+                  <div class="p"></div>
+                </div>
+              </div>
+              <div class="img"></div>
+            </div>
+            <div class="list-item">
+              <div class="left">
+                <div class="t1"></div>
+                <div class="t2">
+                  <div class="p"></div>
+                  <div class="p"></div>
+                </div>
+              </div>
+              <div class="img"></div>
+            </div>
+            <div class="list-item">
+              <div class="left">
+                <div class="t1"></div>
+                <div class="t2">
+                  <div class="p"></div>
+                  <div class="p"></div>
+                </div>
+              </div>
+              <div class="img"></div>
+            </div>
+            <div class="list-item">
+              <div class="left">
+                <div class="t1"></div>
+                <div class="t2">
+                  <div class="p"></div>
+                  <div class="p"></div>
+                </div>
+              </div>
+              <div class="img"></div>
+            </div>
+            <div class="list-item">
+              <div class="left">
+                <div class="t1"></div>
+                <div class="t2">
+                  <div class="p"></div>
+                  <div class="p"></div>
+                </div>
+              </div>
+              <div class="img"></div>
+            </div>
+            <div class="list-item">
+              <div class="left">
+                <div class="t1"></div>
+                <div class="t2">
+                  <div class="p"></div>
+                  <div class="p"></div>
+                </div>
+              </div>
+              <div class="img"></div>
+            </div>
+            <div class="list-item">
+              <div class="left">
+                <div class="t1"></div>
+                <div class="t2">
+                  <div class="p"></div>
+                  <div class="p"></div>
+                </div>
+              </div>
+              <div class="img"></div>
+            </div>
+            <div class="list-item">
+              <div class="left">
+                <div class="t1"></div>
+                <div class="t2">
+                  <div class="p"></div>
+                  <div class="p"></div>
+                </div>
+              </div>
+              <div class="img"></div>
+            </div>
+            <div class="list-item">
+              <div class="left">
+                <div class="t1"></div>
+                <div class="t2">
+                  <div class="p"></div>
+                  <div class="p"></div>
+                </div>
+              </div>
+              <div class="img"></div>
+            </div>
+            <div class="list-item">
+              <div class="left">
+                <div class="t1"></div>
+                <div class="t2">
+                  <div class="p"></div>
+                  <div class="p"></div>
+                </div>
+              </div>
+              <div class="img"></div>
+            </div>
+            <div class="list-item">
+              <div class="left">
+                <div class="t1"></div>
+                <div class="t2">
+                  <div class="p"></div>
+                  <div class="p"></div>
+                </div>
+              </div>
+              <div class="img"></div>
+            </div>
+            <div class="list-item">
+              <div class="left">
+                <div class="t1"></div>
+                <div class="t2">
+                  <div class="p"></div>
+                  <div class="p"></div>
+                </div>
+              </div>
+              <div class="img"></div>
+            </div>
+            <div class="list-item">
+              <div class="left">
+                <div class="t1"></div>
+                <div class="t2">
+                  <div class="p"></div>
+                  <div class="p"></div>
+                </div>
+              </div>
+              <div class="img"></div>
+            </div>
+          </div>
+        </div>
+        <div class="skeleton-bottom">
+          <div class="zfz g-block"></div>
+          <div class="zfz g-block"></div>
+          <div class="zfz g-block"></div>
+          <div class="zfz g-block"></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      window.getUrlParam = function (name) {
+        let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        let r = window.location.search.substr(1).match(reg);
+        if (r != null) return decodeURI(r[2]);
+        return "";
+      }
+
+     
+
+      
+      
+      // 判断横屏竖屏 给skeleton 加上class
+      var skeleton = document.querySelector('.skeleton')
+      var body = document.querySelector('body')
+      var html = document.querySelector('html')
+      var width = window.innerWidth
+      var height = window.innerHeight
+      let isIphoneX = /iphone/gi.test(navigator.userAgent) && ((height / width) >= 2 ||(width / height) >= 2)
+      if (width > height) {
+        window.landscape = true;
+        skeleton.classList.add('landscape')
+        html.setAttribute('data-landscope','true')
+        // if (getUrlParam("safeAreaTop")) {
+        //   skeleton.style.paddingLeft = getUrlParam("safeAreaTop") + "px";
+        //   skeleton.style.paddingRight = getUrlParam("safeAreaTop") + "px";
+        // }
+        if(getUrlParam("lang") == 'ar'){
+          skeleton.classList.add('landscape-ar')
+        }
+      }else{
+        // 判断是否ios且 宽高比大于2
+        if(/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent) && height/width > 2){
+          skeleton.style.paddingTop = '33px'
+          document.querySelector('.skeleton-bottom').style.paddingBottom = '20px'
+        }
+        if (getUrlParam("safeAreaTop")) {
+          skeleton.style.paddingTop = getUrlParam("safeAreaTop") + "px";
+        }
+      }
+      if(isIphoneX){
+        document.documentElement.style.setProperty('--size-fix-hair-lr','44px')
+        document.documentElement.style.setProperty('--footer-padding','20px')
+      }else if (Number(getUrlParam("safeAreaTop"))) {
+        document.documentElement.style.setProperty('--size-fix-hair-lr',getUrlParam("safeAreaTop") + 'px')
+        document.documentElement.style.setProperty('--footer-padding','20px')
+      }
+
+    
+     if (Number(getUrlParam("titleHeight"))){
+       document.querySelector('.skeleton-top').style.height = getUrlParam("titleHeight") + 'px'
+       document.documentElement.style.setProperty('--titleHeight',getUrlParam("titleHeight") + 'px')
+      }
+      let white = ['100010041','100010082','100010089']
+      if(white.includes(getUrlParam("gameid"))){
+        document.querySelector('html').setAttribute('data-theme', 'white')
+      }
+      
+
+  </script>
+      
+
+
+    
+  </div>
+<link href="css/chunk-vendors.c412edf5.css" rel="stylesheet"><link href="css/app.f81d929a.css" rel="stylesheet"><script type="text/javascript" src="js/chunk-vendors.814154f2.js"></script><script type="text/javascript" src="js/app.27a13e3f.js"></script></body>
+
+</html>

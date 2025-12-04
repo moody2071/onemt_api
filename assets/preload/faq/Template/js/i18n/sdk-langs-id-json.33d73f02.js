@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["i18n/sdk-langs-id-json"],{fd1e:function(n){n.exports=JSON.parse('{"复制成功":"Berhasil disalin","账号处理结果":"Hasil akun"}')}}]);

@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html dir="ltr">
+
+<head>
+  <meta onemt-sdk-field="with-header" onemt-sdk-value="false">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <link rel="icon" href="favicon.ico">
+  <style>
+    /*默认盒模型为border-box*/
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+    html,
+    body,
+    #app {
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        overflow: hidden;
+        margin: 0;
+    }
+    html {
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+      font-size: 14px;
+      line-height: 1.15;
+    }
+    @media screen and (min-width: 375px) {
+      html {
+        /* iPhone6的375px尺寸作为16px基准，414px正好18px大小, 600 20px */
+        font-size: calc(87.5% + 2 * (100vw - 375px) / 39);
+        font-size: calc(14px + 2 * (100vw - 375px) / 39);
+      }
+    }
+    @media screen and (min-width: 414px) {
+      html {
+        /* 414px-1000px每100像素宽字体增加1px(18px-22px) */
+        font-size: calc(100% + 2 * (100vw - 375px) / 39);
+        font-size: calc(16px + 4 * (100vw - 414px) / 586);
+      }
+    }
+    @media screen and (min-width: 600px) {
+      html {
+        font-size: 14px;
+      }
+    }
+    body {
+      font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,Segoe UI,Arial,Roboto,PingFang SC,miui,Hiragino Sans GB,Microsoft Yahei,sans-serif;
+      overflow: hidden;
+      transform: translate3d(0, 0, 1px);
+      margin: 0;
+    }
+    #app {
+      position: relative;
+    }
+    .m-view-group {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    .m-view {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+      background: #fff;
+      overflow: hidden;
+      position: absolute;
+    }
+    .view {
+      transition: all .3s ease;
+      will-change: transform;
+      position: absolute;
+      opacity:1;
+    }
+    .m-header {
+      position: relative;
+      z-index: 101;
+      flex: 0 0 auto;
+      width: 100%;
+      height: 50px;
+      background-color: #fff;
+      border-bottom: 1px solid #f8f8f8;
+      overflow: hidden;
+    }
+    .m-header--wrapper {
+      display: flex;
+      align-items: center;
+      position: relative;
+      height: 100%;
+      overflow: hidden;
+    }
+    .header-main {
+      position: relative;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: inherit;
+    }
+    .header-title-wrapper {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+    .header-title {
+      width: 100%;
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+      word-break: break-all;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .btn-back {
+      position: relative;
+      flex: 0 0 auto;
+      display: block;
+      height: 44px;
+      width: 44px;
+      margin: 0 2px;
+    }
+    .btn-back::after {
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 1;
+      transition: .3s all ease;
+      content: '';
+      display: block;
+      height: inherit;
+      width: inherit;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIQAAACECAYAAABRRIOnAAAACXBIWXMAACE4AAAhOAFFljFgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAImSURBVHgB7d2xjdpQGMDxZ050FIxwIyDRUHITRJngkkmS2yAbJJkguglCSQESIzBCCjqECE5SRCcCVoT9vuf7/SQE2CX/wtjfs1MCAAAAAAAAAAAAAAAAAAAAAAAAAF6pKvXQZDIZ393dfTt9nJ9em8Ph8Haz2WwTVw1Sz/yJ4Xv6HcOvTafvnxON9CqIv2KYvNg1TjTSmyAuxJCqqnpONNKLY4grMTytVquPiUaKD0IMt1V0EGK4vWKDEEM7igxCDO0pLggxtKuoIMTQvmKCEEM3ighCDN0JH4QYuhU6CDF0L2wQYsgjZBBiyCdcEGLIK1QQYsgvTBBiiCFEEGKII3sQYoglaxBiiCdbEGKIKduQ7elH/5TEEE62IAaDweOZzc9iyCvnGP7izLY30+n0MZFNtiCGw+H709v2zK4vosgn67+M2Wx2v9/v6wPL+zO7363X66+JTmU/DyGKWEKcqRRFHGGuZYgihlBXO0WRX7h5CFHkFXJiShT5hJ2pFEUeoaeuRdG98OsyRNGtIlZuiaI7xaztFEU3ilr9LYr2FRVETRTtKi6ImijaU2QQNVG0o9ggaqK4vaKDqInitooPoiaK2+lFELVLUVRV9bBarRaJq3pz8/PlcrkdDocP6czg7vF4/JBopFePR7gQhccjNNS7B6j8I4qnRCO9OYZ4aT6fj3e73WQ0Gm0Wi8WPBAAAAAAAAAAAAAAAAAAAAAAAAAAAwP/5CfllOhsFNRKyAAAAAElFTkSuQmCC');
+    }
+    html[dir="rtl"] .btn-back {
+      transform: scaleX(-1);
+    }
+    .header-right {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 44px;
+      height: 44px;
+      margin: 0 2px;
+    }
+    .m-view--body-wrapper {
+      flex: 1;
+      position: relative;
+    }
+    .m-view--body-inner {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+    .m-view--body-inner .m-view--body {
+      width: 100%;
+      height: 100%;
+    }
+    .m-view--body-inner .m-view--body .m-view--error {
+      width: 100%;
+      height: 100%;
+    }
+    .m-scroller {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+    .m-scroller-wrapper {
+      -webkit-overflow-scrolling: touch;
+      will-change: scroll-position;
+      contain: size style layout;
+      overflow-x:hidden;
+      width: 100%;
+      height: 100%;
+      overflow-y: scroll;
+      position: relative;
+    }
+    .m-scroller-wrapper__inner {
+      overflow: hidden;
+      min-height: 100%
+    }
+    html[data-onemt-iphonex="1"] .m-scroller-wrapper__inner {
+      padding-bottom: 24px;
+    }
+    html[data-onemt-iphonex="1"][data-onemt-landscape="1"] .m-scroller-wrapper__inner {
+      padding-bottom: 12px;
+    }
+    .failback-body {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .failback-body img {
+      width: 160px;
+      margin: 40% auto 0;
+    }
+    html[data-onemt-landscape="1"] .failback-body img {
+      margin-top: 5%;
+    }
+    .failback-body .skeleton-box {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    .failback-body .skeleton-box--faqs {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .failback-body .skeleton-box--faqs .skeleton-search {
+      width: 92%;
+      height: 30px;
+      background: rgb(242, 242, 245);
+      border-radius: 17px;
+      margin: 24px 0 4px;
+    }
+    html[data-onemt-landscape="1"] .failback-body .skeleton-box--faqs .skeleton-search {
+      width: 95.5%;
+      margin-top: 14px;
+      margin-bottom: 6px;
+    }
+    .failback-body .skeleton-box--faqs .skeleton-faq {
+      width: 92%;
+      height: 16px;
+      background: rgb(242, 242, 245);
+      border-radius: 17px;
+      margin: 24px 0 0;
+    }
+    html[data-onemt-landscape="1"] .failback-body .skeleton-box--faqs .skeleton-faq {
+      width: 95.5%;
+      margin-top: 22px;
+    }
+    .failback-body .skeleton-box--support .skeleton-msg {
+      display: flex;
+      width: 100%;
+      margin: 24px 0 0 16px;
+    }
+    .failback-body .skeleton-box--support .skeleton-msg-avatar {
+      width: 31px;
+      height: 31px;
+      border-radius: 50%;
+      background: #F2F2F5;
+      margin-right: 6px;
+    }
+    .failback-body .skeleton-box--support .skeleton-msg-body {
+      box-sizing: border-box;
+      padding: 2px 12px 10px;
+      width: 74%;
+      background: rgba(244, 242, 245, 0.4);
+      border-radius: 0 10px 10px;
+      margin-top: 8px;
+    }
+    html[data-onemt-landscape="1"] .failback-body .skeleton-box--support .skeleton-msg-body {
+      width: 41%;
+    }
+    .failback-body .skeleton-box--support .skeleton-msg-header {
+      width: calc(100% + 24px);
+      height: 28px;
+      background: #F2F2F5;
+      border-radius: 0 10px 0 0;
+      margin: -2px -12px 0;
+    }
+    .failback-body .skeleton-box--support .skeleton-msg-line {
+      height: 16px;
+      background: #F2F2F5;
+      border-radius: 8px;
+      margin-top: 11px;
+    }
+    .failback-body .skeleton-box--support .skeleton-msg-line--1 {
+      width: 100%;
+    }
+    .failback-body .skeleton-box--support .skeleton-msg-line--2 {
+      width: 53%;
+    }
+    .failback-body .skeleton-box--support .skeleton-msg-line--3 {
+      width: 70%;
+    }
+    .failback-body .skeleton-box--support .skeleton-nav {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      box-sizing: border-box;
+      padding: 10px 16px 0;
+      width: 100%;
+      background: #fff;
+      border-top: 1px solid #E8E8E8;
+    }
+    html[data-onemt-iphonex="1"] .failback-body .skeleton-box--support .skeleton-nav {
+      bottom: 24px;
+    }
+    html[data-onemt-iphonex="1"][data-onemt-landscape="1"] .failback-body .skeleton-box--support .skeleton-nav {
+      bottom: 12px;
+    }
+    .failback-body .skeleton-box--support .skeleton-nav-row {
+      display: flex;
+    }
+    .failback-body .skeleton-box--support .skeleton-nav-input {
+      flex: 1;
+      width: 100%;
+      height: 30px;
+      border-radius: 15px;
+      background: #F2F2F5;
+      margin-right: 5px;
+    }
+    .failback-body .skeleton-box--support .skeleton-nav-btn {
+      flex: 0 0 auto;
+      width: 58px;
+      height: 30px;
+      border-radius: 15px;
+      background: #F2F2F5;
+    }
+    .failback-body .skeleton-box--support .skeleton-nav-list {
+      display: flex;
+      justify-content: space-between;
+      width: 95%;
+      margin: 11px auto 0;
+    }
+    .failback-body .skeleton-box--support .skeleton-nav-item {
+      width: 32px;
+      height: 32px;
+      background: rgba(242, 242, 245, 1);
+      border-radius: 4px;
+      margin: 5px;
+    }
+    .failback-body .skeleton-hl {
+      position: absolute;
+      left: -100%;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      animation: skeleton-loading 1.1s infinite linear;
+    }
+    @keyframes skeleton-loading {
+      from {
+        left: -100%;
+      }
+      to {
+        left: 100%;
+      }
+    }
+    html[data-onemt-landscape="1"] .failback-body .skeleton-hl {
+      animation-duration: 1.958s;
+    }
+    .failback-body .skeleton-hl::before,
+    .failback-body .skeleton-hl::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      width: 45%;
+      height: 100%;
+      opacity: 0.6;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: cover;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    }
+    .failback-body .skeleton-hl::before {
+      left: -18%;
+    }
+    .failback-body .skeleton-hl::after {
+      right: -18%;
+    }
+    .failback-body p {
+      font-size: 12px;
+      color: #999;
+      text-align: center;
+      padding: 0 10px;
+      margin: 0 auto;
+    }
+    .__onemt__loader-box {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: inherit;
+      border-radius: inherit;
+    }
+    @keyframes __onemt__spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    .__onemt__loader {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      box-sizing: border-box;
+      margin: auto;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      border: 2px solid #e8e8e8;
+      border-top-color: rgba(0, 145, 255, 0.5);
+      animation: __onemt__spin .65s infinite linear;
+    }
+  </style>
+  <link media="print" rel="stylesheet" href="css/app.bf206e5d.css"><link media="print" rel="stylesheet" href="css/chunk-vendors.181b68b0.css">
+  <title>sdk-support</title>
+</head>
+
+<body>
+  <noscript>
+    <strong>We're sorry but support-v2 doesn't work properly without JavaScript enabled. Please enable it to
+      continue.</strong>
+  </noscript>
+  <div id="app">
+    <div class="m-view view">
+      <div id="failback-header" class="m-header">
+        <div class="m-header--wrapper">
+          <a class="btn-back"></a>
+          <div class="header-main">
+            <div class="header-title-wrapper">
+              <span class="header-title">  </span>
+            </div>
+          </div>
+          <div class="header-right"></div>
+        </div>
+      </div>
+      <div class="m-view--body-wrapper">
+        <div class="m-view--body-inner">
+          <div class="m-view--body">
+            <div class="m-scroller ios-scroller">
+              <div class="m-scroller-wrapper">
+                <div class="m-scroller-wrapper__inner">
+                  <div id="failback-body" class="failback-body"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <template id="support-skeleton">
+    <div class="skeleton-msg">
+      <div class="skeleton-msg-avatar"></div>
+      <div class="skeleton-msg-body">
+        <div class="skeleton-msg-line skeleton-msg-line--1"></div>
+        <div class="skeleton-msg-line skeleton-msg-line--2"></div>
+      </div>
+    </div>
+    <div class="skeleton-msg">
+      <div class="skeleton-msg-avatar"></div>
+      <div class="skeleton-msg-body">
+        <div class="skeleton-msg-header"></div>
+        <div class="skeleton-msg-line skeleton-msg-line--1"></div>
+        <div class="skeleton-msg-line skeleton-msg-line--1"></div>
+        <div class="skeleton-msg-line skeleton-msg-line--2"></div>
+        <div class="skeleton-msg-line skeleton-msg-line--1"></div>
+        <div class="skeleton-msg-line skeleton-msg-line--3"></div>
+      </div>
+    </div>
+    <div class="skeleton-nav">
+      <div class="skeleton-nav-row">
+        <div class="skeleton-nav-input"></div>
+        <div class="skeleton-nav-btn"></div>
+      </div>
+      <div class="skeleton-nav-list">
+        <div class="skeleton-nav-item"></div>
+        <div class="skeleton-nav-item"></div>
+        <div class="skeleton-nav-item"></div>
+        <div class="skeleton-nav-item"></div>
+      </div>
+    </div>
+  </template>
+  <script>
+    ~(function () {
+        function checkSDK() {
+          if (window.social &&
+            window.social.request instanceof Function) {
+            return true
+          }
+          return false
+        }
+        var isSDK = window.inSDK = checkSDK();
+
+        function query2obj(query) {
+          if (typeof query !== "string" || query.indexOf("?") !== 0) return {};
+          var queryItems = query.slice(1).split("&");
+          var queryMap = {};
+          queryItems.forEach(item => {
+            if (!item) return;
+            var itemArr = item.split("="),
+              key = itemArr[0],
+              value = itemArr[1];
+            queryMap[key] = value;
+          });
+          return queryMap;
+        }
+
+        var searchObj = query2obj(location.search)
+        var NODE_ENV = 'production'
+        window.__ONEMT_ENV__ = NODE_ENV !== 'production' ? NODE_ENV : searchObj.ENV || searchObj.env || 'production'
+        console.log('ENV =>', window.__ONEMT_ENV__)
+        var local = JSON.parse('{"备注说明":{},"zh-TW":{"系统开小差了，请稍后再试":"系統開小差了，請稍後再試；","sdk_support_tab_title":"客服支持","sdk_help_title":"幫助"},"zh-CN":{"系统开小差了，请稍后再试":"系统开小差了，请稍后再试；","sdk_support_tab_title":"客服支持","sdk_help_title":"帮助"},"vi":{"系统开小差了，请稍后再试":"hệ thống đang gặp chút vấn đề, vui lòng thử lại sau!","sdk_support_tab_title":"Hỗ trợ","sdk_help_title":"Giúp đỡ"},"tr":{"系统开小差了，请稍后再试":"Sistem çöktü, lütfen daha sonra tekrar deneyin!","sdk_support_tab_title":"Destek","sdk_help_title":"Yardım"},"th":{"系统开小差了，请稍后再试":"ระบบได้หายไป โปรดลองอีกครั้งในภายหลัง!","sdk_support_tab_title":"สนับสนุน","sdk_help_title":"ช่วยเหลือ"},"sv":{"系统开小差了，请稍后再试":"Systemet har gått AWOL. Vänligen försök igen senare!","sdk_support_tab_title":"Support","sdk_help_title":"Hjälp"},"ru":{"系统开小差了，请稍后再试":"Система ушла в самоволку. Пожалуйста, повторите попытку позже!","sdk_support_tab_title":"Поддержка","sdk_help_title":"Поддержка"},"ro":{"系统开小差了，请稍后再试":"Sistemul a DISPARUT. Te rugam sa incerci din nou mai tarziu!","sdk_support_tab_title":"Suport","sdk_help_title":"Ajutor"},"pt":{"系统开小差了，请稍后再试":"O sistema sumiu. Por favor, tente novamente mais tarde!","sdk_support_tab_title":"Suporte","sdk_help_title":"Ajuda"},"pl":{"系统开小差了，请稍后再试":"System stał się AWOL. Spróbuj ponownie później!","sdk_support_tab_title":"Wsparcie","sdk_help_title":"Pomoc"},"nl":{"系统开小差了，请稍后再试":"Het systeem is AWOL. Probeer het later alsjeblieft opnieuw!","sdk_support_tab_title":"Ondersteuning","sdk_help_title":"Help"},"ms":{"系统开小差了，请稍后再试":"The system has gone AWOL. Please try again later!","sdk_support_tab_title":"Support","sdk_help_title":"Help"},"ko":{"系统开小差了，请稍后再试":"시스템이 중단되었습니다. 나중에 다시 시도해 주세요!","sdk_support_tab_title":"지원","sdk_help_title":"도움말"},"ja":{"系统开小差了，请稍后再试":"システムエラー、しばらくお待ちください","sdk_support_tab_title":"サポート","sdk_help_title":"ヘルプ"},"it":{"系统开小差了，请稍后再试":"Il sistema è diventato non disponibile. Per favore riprova più tardi!","sdk_support_tab_title":"Supporto","sdk_help_title":"Aiuto"},"id":{"系统开小差了，请稍后再试":"Sistem telah menghilang tanpa kabar. Silakan coba lagi nanti!","sdk_support_tab_title":"Dukungan","sdk_help_title":"Bantuan"},"fr":{"系统开小差了，请稍后再试":"Erreur de système. Veuillez réessayer plus tard !","sdk_support_tab_title":"Support","sdk_help_title":"Aide"},"fa":{"sdk_support_tab_title":"پشتیبانی"},"es":{"系统开小差了，请稍后再试":"El sistema está ausente sin permiso. ¡Por favor, inténtelo de nuevo más tarde!","sdk_support_tab_title":"Soporte","sdk_help_title":"Ayuda"},"en":{"系统开小差了，请稍后再试":"The system has gone AWOL. Please try again later!","sdk_support_tab_title":"Support","sdk_help_title":"Help"},"de":{"系统开小差了，请稍后再试":"Das System ist nicht mehr erreichbar. Versucht es später erneut!","sdk_support_tab_title":"Support","sdk_help_title":"Hilfe"},"ar":{"系统开小差了，请稍后再试":"فقدان الاتصال بالنظام، يرجى المحاولة في وقت لاحق!","sdk_support_tab_title":"الدعم","sdk_help_title":"مساعدة"}}');
+
+        // 设置排版方向
+        if (searchObj.lang === "ar") {
+          document.documentElement.setAttribute("dir", "rtl");
+        }
+
+        // 设置标题
+        var titleNodeList = document.getElementsByClassName("header-title");
+        if (titleNodeList.length > 0) {
+          const titleNode = titleNodeList[0];
+          titleNode.innerHTML = local[searchObj.lang || "en"][searchObj.action === "faqs" ? "sdk_help_title" : "sdk_support_tab_title"];
+        }
+
+        function fullDisplay() {
+          var { height, width } = window.screen
+          var screenHeight = Math.max(width, height)
+          var screenWidth = Math.min(width, height)
+          return navigator.userAgent.indexOf('iPhone') > -1 && screenHeight / screenWidth >= 1.78
+        }
+
+        function getSafeAreaTop() {
+          if (!isSDK) return 0;
+
+          let safeAreaTop = parseInt(searchObj.safeAreaTop);
+          if (Number.isNaN(safeAreaTop)) {
+            safeAreaTop = fullDisplay() ? 44 : 0;
+          }
+
+          return safeAreaTop;
+        }
+        var safeAreaTop = getSafeAreaTop();
+
+        function mobile() {
+          var { height, width } = window.screen
+          var screenHeight = Math.max(width, height)
+          return screenHeight < 1024
+        }
+
+        function iphonex() {
+          return safeAreaTop > 0
+        }
+
+        function ipad() {
+          var { height, width } = window.screen
+          var screenHeight = Math.max(width, height)
+          var screenWidth = Math.min(width, height)
+          return (screenHeight >= 1024 && screenHeight < 1440)
+            && (screenHeight / screenWidth) < 1.78
+        }
+
+        function landscape() {
+          var { clientWidth, clientHeight } = document.documentElement
+
+          return (mobile() || ipad()) && clientHeight < clientWidth
+        }
+
+        function handleResize() {
+          if (isSDK) {
+            document.documentElement.setAttribute('data-onemt-sdk', "1");
+          } else {
+            document.documentElement.setAttribute('data-onemt-sdk', "0");
+          }
+
+          var isIphonex = iphonex();
+          if (isIphonex) {
+            document.documentElement.setAttribute('data-onemt-iphonex', "1");
+          } else {
+            document.documentElement.setAttribute('data-onemt-iphonex', "0");
+          }
+
+          var isLandscape = landscape();
+          if (isLandscape) {
+            document.documentElement.setAttribute('data-onemt-landscape', "1");
+          } else {
+            document.documentElement.setAttribute('data-onemt-landscape', "0");
+          }
+
+          // 设置安全距离
+          if (!isLandscape) {
+            document.body.style.padding = safeAreaTop + "px" + " 0 0";
+          } else {
+            document.body.style.padding = "0 " + safeAreaTop + "px";
+          }
+
+          // 设置标题栏高度
+          function getTitleHeight() {
+            let titleHeight = parseInt(searchObj.titleHeight);
+            if (Number.isNaN(titleHeight)) {
+              titleHeight = 50;
+            }
+
+            return titleHeight;
+          }
+          var headerElemList = document.getElementsByClassName("m-header");
+          if (headerElemList.length > 0) {
+            const titleHeight = window.titleHeight = getTitleHeight();
+            headerElemList[0].style.height = titleHeight + "px";
+          }
+
+          // 渲染骨架屏
+          var failbackBody = document.getElementById("failback-body");
+          if (failbackBody == null) return;
+          var expected = false;
+          const whiteList = ["faqs", "feedback", "myIssues", "feedbackFlow"];
+          for (let i = 0; i < whiteList.length; i++) {
+            const name = whiteList[i];
+            if (name === searchObj.action) {
+              expected = true;
+              break;
+            }
+          }
+          if (expected) {
+            failbackBody.innerHTML = "";
+            var skeletonBox = document.createElement("div");
+            if (searchObj.action === "faqs") {
+              skeletonBox.className = "skeleton-box skeleton-box--faqs"
+              var total = failbackBody.offsetHeight - (!isLandscape ? 54 : 50);
+              var size = 40;
+              var count = Math.floor(total / 40);
+              if (isLandscape) {
+                count += 1;
+              }
+              var list = [];
+              for (var i = 0; i < count; i++) {
+                list.push('<div class="skeleton-faq"></div>');
+              }
+              skeletonBox.innerHTML = '<div class="skeleton-search"></div>' + list.join("") + '<div class="skeleton-hl"></div>';
+            } else {
+              skeletonBox.className = "skeleton-box skeleton-box--support"
+              var temp = document.getElementById("support-skeleton");
+              if (temp) {
+                skeletonBox.innerHTML = temp.innerHTML + '<div class="skeleton-hl"></div>';
+              }
+            }
+            failbackBody.appendChild(skeletonBox);
+          } else {
+            failbackBody.innerHTML = '<div class="__onemt__loader-box"><div class="__onemt__loader"></div></div>'
+          }
+        };
+        window.addEventListener('resize', handleResize);
+        window.addEventListener('orientationchange', handleResize);
+        handleResize();
+
+        window.__throwError__ = function (force = false) {
+          var failbackBody = document.getElementById("failback-body");
+          if (failbackBody == null && !force) return;
+          if (force) {
+            failbackBody = document.createElement("div");
+            failbackBody.className = "failback-body";
+          }
+          failbackBody.innerHTML = "";
+          var img = new Image();
+          img.src = "bad.png";
+          failbackBody.appendChild(img);
+          var p = document.createElement("p");
+          var text = local[searchObj.lang || "en"]["系统开小差了，请稍后再试"];
+          p.innerText = text;
+          failbackBody.appendChild(p);
+          if (force) {
+            const elemList = document.getElementsByClassName("m-scroller-wrapper__inner")
+            if (elemList.length > 0) {
+              elemList[0].appendChild(failbackBody)
+            }
+          }
+        }
+        window.__onemt_pageback__ = setTimeout(window.__throwError__, 24000);
+
+        document
+          .getElementById("failback-header")
+          .addEventListener("click", function () {
+            window.social &&
+              window.social.request(
+                "closePage",
+                JSON.stringify({
+                  requestId: `closePage-1715326450468`,
+                })
+              );
+          });
+      })();
+  </script>
+  <script src="js/axios.js"></script>
+  <script src="js/monitor.js"></script>
+  <script>
+    window.__gameData__ = {
+      '110000100': {
+        theme: 'default',
+        game: 'SDK',
+        landscope: false
+      },
+      '100000601': {
+        theme: 'default',
+        game: 'KOH',
+        landscope: false
+      },
+      '100000611': {
+        theme: 'default',
+        game: 'ROS',
+        landscope: false
+      },
+      '100000651': {
+        theme: 'default',
+        game: 'ROSKO',
+        landscope: false
+      },
+      '100000801': {
+        theme: 'default',
+        game: 'ROK',
+        landscope: false
+      },
+      '100000819': {
+        theme: 'default',
+        game: 'ROK_MTX',
+        landscope: false
+      },
+      '100000818': {
+        theme: 'default',
+        game: 'ROK_Onestore',
+        landscope: false
+      },
+      '100000811': {
+        theme: 'default',
+        game: 'ROK_CN',
+        landscope: false
+      },
+      '100000812': {
+        theme: 'default',
+        game: 'ROK_CN_CO',
+        landscope: false
+      },
+      '100002001': {
+        theme: 'default',
+        game: 'BOE',
+        landscope: false
+      },
+      '100001001': {
+        theme: 'default',
+        game: 'OE',
+        landscope: false
+      },
+      '100003001': {
+        theme: 'default',
+        game: 'WOE',
+        landscope: false
+      },
+      '100005001': {
+        theme: 'default',
+        game: 'SF',
+        landscope: true
+      },
+      '100000901': {
+        theme: 'default',
+        game: 'DK',
+        landscope: false
+      },
+
+      '100006001': {
+        theme: 'default',
+        game: 'YAMI',
+        landscope: false
+      },
+      '100007001': {
+        theme: 'default',
+        game: 'MD',
+        landscope: true
+      },
+      '100010012': {
+        theme: 'default',
+        game: 'WW',
+        landscope: false
+      },
+      '100008001': {
+        theme: 'default',
+        game: 'GOS',
+        landscope: true
+      },
+      '100010017': {
+        theme: 'default',
+        game: 'KOW',
+        landscope: false
+      },
+      '100010025': {
+        theme: 'default',
+        game: 'SH',
+        landscope: false
+      },
+      '100010028': {
+        theme: 'default',
+        game: 'SHBRA',
+        landscope: false
+      },
+      '100010031': {
+        theme: 'default',
+        game: 'SHTWN',
+        landscope: false
+      },
+      '100010033': {
+        theme: 'default',
+        game: 'SHEN',
+        landscope: false
+      },
+      '100010038': {
+        theme: 'default',
+        game: 'SHKR',
+        landscope: false
+      },
+      '100010026': {
+        theme: 'default',
+        game: 'LD',
+        landscope: true
+      },
+      '100010032': {
+        theme: 'default',
+        game: 'MK',
+        landscope: true
+      },
+      '100010035': {
+        theme: 'default',
+        game: 'emc',
+        landscape: false,
+        defaultLang: 'en'
+      },
+      '100010018': {
+        theme: 'default',
+        game: 'pp',
+        landscape: false,
+        defaultLang: 'en'
+      },
+      '100010034': {
+        theme: 'default',
+        game: 'pos',
+        landscape: true,
+        defaultLang: 'en'
+      },
+      '100010041': {
+        theme: 'default',
+        game: 'aow',
+        landscape: false,
+        defaultLang: 'en'
+      }
+    }
+    
+    try {
+      window.onemtMonitor = new window.OnemtMonitor({
+        pkgVersion: 'b3a6d5460086116c67d18fc1cb089a9b7515bc38',
+        env: window.__ONEMT_ENV__ !== "production" ? "debug" : "production",
+        useAxiosReport: true,
+        collectConsoleError: false,
+        getDeviceData: function () {
+          const user = window.__ONEMT_USER__ || {}
+          const deviceInfo = window.__DEVICE_INFO__ || {}
+          const gamePlayer = window.__GAME_PLAYER__ || {}
+          return {
+            appId: deviceInfo.appId || '',
+            ltDeviceId: deviceInfo.deviceId || '',
+            ltId: user.userId || '',
+            sdkVersion: deviceInfo.clientVersion || ''
+          }
+        }
+      });
+    } catch (_) {}
+  </script>
+  <script defer="defer" src="js/app.3b5faea8.js"></script><script defer="defer" src="js/chunk-vendors.567ab40d.js"></script>
+</body>
+</html>

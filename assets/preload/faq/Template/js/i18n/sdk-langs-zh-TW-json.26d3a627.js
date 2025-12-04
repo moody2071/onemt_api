@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["i18n/sdk-langs-zh-TW-json"],{"8f49":function(n){n.exports=JSON.parse('{"复制成功":"複製成功","账号处理结果":"帳號處理結果"}')}}]);

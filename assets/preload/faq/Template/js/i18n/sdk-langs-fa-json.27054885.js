@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["i18n/sdk-langs-fa-json"],{"8b76":function(n){n.exports=JSON.parse('{"复制成功":"کپی موفق","账号处理结果":"نتیجه حساب"}')}}]);
